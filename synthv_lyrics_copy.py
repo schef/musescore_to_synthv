@@ -8,6 +8,7 @@ ONE_BEAT = 705600000
 BEATS_IN_BAR = 4
 THIRTYSECOND_NOTES_IN_BEAT = 8
 
+
 class txt:
     ENDC = '\033[0m'
     CBOLD = '\33[1m'
@@ -46,6 +47,7 @@ class txt:
 
     TAB = '    '
 
+
 def read_file(file_name):
     with open(file_name, "r") as read_file:
         data = json.load(read_file)
@@ -68,6 +70,10 @@ def get_track_by_name(data, track_name):
     for track in data['tracks']:
         if track['name'] == track_name:
             return track
+
+
+def get_track_by_index(data, index):
+    return data['tracks'][index]
 
 
 def set_track_by_name(data, track_edit, track_name):
@@ -106,29 +112,34 @@ def edit_lyrics(data, start_bar, start_beat, end_bar, end_beat, track_from, trac
     data = set_track_by_name(data, track_to_data, track_to)
     return data
 
+
 @click.group()
 def main():
     pass
 
+
 @click.command()
 @click.argument('infile', type=click.Path(exists=True))
+@click.option('-t', '--track', prompt=True)
 def info(infile):
     click.echo(txt.CBOLD + "Info:" + txt.ENDC + " " + infile)
     infile_content = read_file(infile)
 
     click.echo(txt.CBOLD + "Tracks:" + txt.ENDC)
     track_names = get_track_names(infile_content)
-    for name in track_names:
-        click.echo(txt.TAB + name)
+    for e, name in enumerate(track_names):
+        click.echo(txt.TAB + '[' + str(e) + '] ' + name)
+
+
 
 main.add_command(info)
 
 if __name__ == "__main__":
     main()
     # if not (len(sys.argv) > 2):
-        # print("Usage:")
-        # print("    " + sys.argv[0] + " <infile> <outfile>")
-        # sys.exit(0)
+    # print("Usage:")
+    # print("    " + sys.argv[0] + " <infile> <outfile>")
+    # sys.exit(0)
     # infile = sys.argv[1]
     # data = read_file(infile)
 
@@ -161,11 +172,11 @@ if __name__ == "__main__":
 
     # track_to = input("Track name to copy to [" + track_names[1] + "]: ")
     # if not track_to:
-        # track_to = track_names[1]
+    # track_to = track_names[1]
 
     # if not (track_from in track_names) or not (track_to in track_names):
-        # print("Unvalid track name")
-        # sys.exit(0)
+    # print("Unvalid track name")
+    # sys.exit(0)
 
     #     track_to = []
 
