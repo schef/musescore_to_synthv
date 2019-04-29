@@ -4,6 +4,7 @@ import json
 import sys
 import click
 import xmltodict
+import xml.etree.ElementTree as ET  
 
 ONE_BEAT = 705600000
 BEATS_IN_BAR = 4
@@ -61,9 +62,8 @@ def write_json_file(file_name, data):
 
 
 def read_xml_file(file_name):
-    with open(file_name, "r") as read_file:
-        data = read_file.read()
-    return xmltodict.parse(data)
+    data = ET.parse(file_name).getroot()
+    return data
 
 def get_track_names(data):
     track_names = []
@@ -139,54 +139,38 @@ def info(infile):
 
 main.add_command(info)
 
-# if __name__ == "__main__":
-    # main()
-    # if not (len(sys.argv) > 2):
-    # print("Usage:")
-    # print("    " + sys.argv[0] + " <infile> <outfile>")
-    # sys.exit(0)
-    # infile = sys.argv[1]
-    # data = read_file(infile)
+def depth(l):
+    if isinstance(l, list):
+        return 1 + max(depth(item) for item in l)
+    else:
+        return 0
 
-    # start_bar = input("Start bar [0]: ")
-    # if not start_bar:
-    #     start_bar = 0
-    # start_bar = int(start_bar)
+durationType = {
+    'measure' : 1, #TODO: match bar
+    'whole' : 1,
+    'half' : 2,
+    'quarter' : 4,
+    'eighth' : 8,
+    '16th' : 16,
+    '32nd' : 32
+}
 
-    # start_beat = input("Start beat [0]: ")
-    # if not start_beat:
-    #     start_beat = 0
-    # start_beat = int(start_beat)
+def getDotDuration(duration, numOfDots):
+    dotDuration = duration / 2
+    dotSum = 0
+    for i in range(numOfDots):
+        dotSum += dotDuration
+        dotDuration = dotDuration / 2
+    return duration + dotDuration
 
-    # end_bar = input("End bar [10]: ")
-    # if not end_bar:
-    #     end_bar = 10
-    # end_bar = int(end_bar)
+def print_me(data, tab, depth):
+    for e,i in enumerate(data):
+        # print(tab, e, i.tag, i.attrib, i.text.strip())
+        if i.tag == "Staff" and depth == 1:
+            print(depth, "Staff", len(i))
+        if (len(i)):
+            print_me(i, tab + "  ", depth + 1)
 
-    # end_beat = input("End beat [0]: ")
-    # if not end_beat:
-    #     end_beat = 10
-    # end_beat = int(end_beat)
-
-    # track_names = get_track_names(data)
-    # print(track_names)
-
-    # track_from = input("Track name to copy from [" + track_names[0] + "]: ")
-    # if not track_from:
-    #     track_from = track_names[0]
-
-    # track_to = input("Track name to copy to [" + track_names[1] + "]: ")
-    # if not track_to:
-    # track_to = track_names[1]
-
-    # if not (track_from in track_names) or not (track_to in track_names):
-    # print("Unvalid track name")
-    # sys.exit(0)
-
-    #     track_to = []
-
-    # data_edit = edit_lyrics(data, start_bar, start_beat,
-    #                         end_bar, end_beat, track_from, track_to)
-
-    # outfile = sys.argv[2]
-    # write_file(outfile, data_edit)
+if __name__ == "__main__":
+    root = read_xml_file('musicxml.mscx')
+    print_me(root, "", 0)
