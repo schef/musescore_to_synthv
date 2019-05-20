@@ -3,6 +3,8 @@
 import xml.etree.ElementTree as ET
 from txt_colors import txt
 
+set_staff_start_cb = None
+set_staff_end_cb = None
 set_time_signature_cb = None
 set_pitch_cb = None
 set_rest_cb = None
@@ -56,6 +58,9 @@ def parse_root(r):
     for s in r.findall("./Score/Staff"):
         print("Staff", s.attrib)
         m_count = 0
+        global set_staff_start_cb
+        if (set_staff_start_cb):
+            set_staff_start_cb()
         for m in s.findall("./Measure"):
             print(txt.TAB, m.tag, m_count)
             m_count += 1
@@ -67,8 +72,17 @@ def parse_root(r):
                     parse_chord(v)
                 elif (v.tag == "Rest"):
                     parse_rest(v)
+        global set_staff_end_cb
+        if (set_staff_end_cb):
+            set_staff_end_cb()
 
-def parse_xml(xml_file, set_time_signature_func = None, set_pitch_func = None, set_rest_func = None):
+def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None, set_pitch_func = None, set_rest_func = None):
+    if (set_staff_start_func):
+        global set_staff_start_cb
+        set_staff_start_cb = set_staff_start_func
+    if (set_staff_end_func):
+        global set_staff_end_cb
+        set_staff_end_cb = set_staff_end_func
     if (set_time_signature_func):
         global set_time_signature_cb
         set_time_signature_cb = set_time_signature_func
