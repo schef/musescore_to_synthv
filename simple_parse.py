@@ -3,7 +3,7 @@
 import xml.etree.ElementTree as ET
 
 class txt:
-    ENDC = '\033[0m'
+    CEND = '\033[0m'
     CBOLD = '\33[1m'
     CITALIC = '\33[3m'
     CURL = '\33[4m'
@@ -40,8 +40,19 @@ class txt:
 
     TAB = '  '
 
-durationType = {
-    'measure' : 1, #TODO: match bar
+time_signature_n = 0
+time_signature_d = 0
+
+def get_time_signature_duration(n, d):
+    if (n == 4 and n == 4):
+        return 1
+    elif (n == 3 and n == 4):
+        return duration_type[whole]
+    elif (n == 6 and n == 8):
+        return duration_type[whole]
+
+duration_type = {
+    'measure' : get_time_signature_duration(time_signature_n, time_signature_d),
     'whole' : 1,
     'half' : 2,
     'quarter' : 4,
@@ -50,36 +61,58 @@ durationType = {
     '32nd' : 32
 }
 
+def set_time_signature(n, d):
+    print(txt.CRED + "set_time_signature" + txt.CEND, n, d)
+
+def parse_time_signature(v):
+    n = d = ""
+    for t in v.findall("./*"):
+        print(txt.TAB * 3, t.tag)
+        if (t.tag == "sigN"):
+            n = t.text
+        elif (t.tag == "sigD"):
+            d = t.text
+    set_time_signature(n, d)
+
+def set_pitch(pitch, duration):
+    print(txt.CRED + "set_pitch" + txt.CEND, pitch, duration)    
+
+def parse_chord(v):
+    duration = ""
+    for c in v.findall("./*"):
+        print(txt.TAB * 3, c.tag)
+        if (c.tag == "durationType"):
+            duration = c.text
+        if (c.tag == "Note"):
+            for n in c.findall("./*"):
+                if (n.tag == "pitch"):
+                    set_pitch(n.text, duration)
+
+def set_rest(duration):
+    print(txt.CRED + "set_rest" + txt.CEND, duration)
+
+def parse_rest(v):
+    for r in v.findall("./*"):
+        print(txt.TAB * 3, r.tag)
+        if (r.tag == "durationType"):
+            set_rest(r.text)
+
+def parse_root(r):
+    for s in r.findall("./Score/Staff"):
+        print("Staff", s.attrib)
+        m_count = 0
+        for m in s.findall("./Measure"):
+            print(txt.TAB, m.tag, m_count)
+            m_count += 1
+            for v in m.findall("./voice/*"):
+                print(txt.TAB * 2, v.tag)
+                if (v.tag == "TimeSig"):
+                    parse_time_signature(v)
+                elif (v.tag == "Chord"):
+                    parse_chord(v)
+                elif (v.tag == "Rest"):
+                    parse_rest(v)
+
 tree = ET.parse('examples/musicxml.mscx')
 root = tree.getroot()
-
-staff = []
-
-for s in root.findall("./Score/Staff"):
-    staff.append(s)
-
-for s in staff:
-    print("Staff", s.attrib)
-    m_count = 0
-    for m in s.findall("./Measure"):
-        print(txt.TAB, m.tag, m_count)
-        m_count += 1
-        for v in m.findall("./voice/*"):
-            print(txt.TAB * 2, v.tag)
-            if (v.tag == "Chord"):
-                duration = 0
-                for c in v.findall("./*"):
-                    print(txt.TAB * 3, c.tag)
-                    if (c.tag == "durationType"):
-                        duration = durationType[c.text]
-                    if (c.tag == "Note"):
-                        for n in c.findall("./*"):
-                            if (n.tag == "pitch"):
-                                print(txt.TAB * 4, n.text, duration)
-            elif (v.tag == "Rest"):
-                for r in v.findall("./*"):
-                    print(txt.TAB * 3, r.tag)
-                    duration = 0
-                    if (r.tag == "durationType"):
-                        duration = durationType[r.text]
-                        print(txt.TAB * 4, "r" + str(duration))
+parse_root(root)
