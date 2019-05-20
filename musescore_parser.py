@@ -8,9 +8,12 @@ set_staff_end_cb = None
 set_time_signature_cb = None
 set_pitch_cb = None
 set_rest_cb = None
+set_lyric_cb = None
+set_tie_cb = None
+set_dot_cb = None
 
 def set_time_signature(n, d):
-    # print(txt.CRED + "set_time_signature" + txt.CEND, n, d)
+    print(txt.CRED + "set_time_signature" + txt.CEND, n, d)
     global set_time_signature_cb
     if set_time_signature_cb:
         set_time_signature_cb(n, d)
@@ -26,10 +29,28 @@ def parse_time_signature(v):
     set_time_signature(n, d)
 
 def set_pitch(pitch, duration):
-    # print(txt.CRED + "set_pitch" + txt.CEND, pitch, duration)
+    print(txt.CRED + "set_pitch" + txt.CEND, pitch, duration)
     global set_pitch_cb
     if set_pitch_cb:
         set_pitch_cb(pitch, duration)
+
+def set_lyric(lyric):
+    print(txt.CRED + "set_lyric" + txt.CEND, lyric)
+    global set_lyric_cb
+    if set_lyric_cb:
+        set_lyric_cb(lyric)
+
+def set_tie():
+    print(txt.CRED + "set_tie" + txt.CEND)
+    global set_tie_cb
+    if (set_tie_cb):
+        set_tie_cb()
+
+def set_dot(num):
+    print(txt.CRED + "set_dot" + txt.CEND, num)
+    global set_dot_cb
+    if (set_dot_cb):
+        set_dot_cb(num)
 
 def parse_chord(v):
     duration = ""
@@ -37,13 +58,23 @@ def parse_chord(v):
         print(txt.TAB * 3, c.tag)
         if (c.tag == "durationType"):
             duration = c.text
-        if (c.tag == "Note"):
+        elif (c.tag == "dots"):
+            set_dot(c.text)
+        elif (c.tag == "Lyrics"):
+            for l in c.findall("./*"):
+                if (l.tag == "text"):
+                    set_lyric(l.text)
+        elif (c.tag == "Note"):
             for n in c.findall("./*"):
-                if (n.tag == "pitch"):
+                if (n.tag == "Spanner" and n.attrib['type'] == "Tie"):
+                    for s in n.findall("./*"):
+                        if (s.tag == "next"):
+                            set_tie()
+                elif (n.tag == "pitch"):
                     set_pitch(n.text, duration)
 
 def set_rest(duration):
-    # print(txt.CRED + "set_rest" + txt.CEND, duration)
+    print(txt.CRED + "set_rest" + txt.CEND, duration)
     global set_rest_cb
     if set_rest_cb:
         set_rest_cb(duration)
@@ -76,7 +107,8 @@ def parse_root(r):
         if (set_staff_end_cb):
             set_staff_end_cb()
 
-def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None, set_pitch_func = None, set_rest_func = None):
+def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None,
+                set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None):
     if (set_staff_start_func):
         global set_staff_start_cb
         set_staff_start_cb = set_staff_start_func
@@ -92,6 +124,15 @@ def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, 
     if (set_rest_func):
         global set_rest_cb
         set_rest_cb = set_rest_func
+    if (set_lyric_func):
+        global set_lyric_cb
+        set_lyric_cb = set_lyric_func
+    if (set_tie_func):
+        global set_tie_cb
+        set_tie_cb = set_tie_func
+    if (set_dot_func):
+        global set_dot_cb
+        set_dot_cb = set_dot_func
 
     tree = ET.parse(xml_file)
     root = tree.getroot()
