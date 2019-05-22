@@ -4,6 +4,7 @@ import click
 import re
 from txt_colors import txt
 import musescore_parser as MP
+import jp_to_hr
 
 ONE_BEAT = 705600000
 TAB = '  '
@@ -44,6 +45,10 @@ duration_type = {
 def generate_lyric(l):
     if (l in ["-", "", '', None]):
         return "-"
+    string = "."
+    for letter in l:
+        string += " " + jp_to_hr.jp_to_hr[letter.lower()]
+    return string
     return re.sub(r'\W+', '', l)
 
 def generate_project_start():
@@ -233,8 +238,6 @@ def set_dot(num):
 def write_to_file(file_name, data):
     with open(file_name, "w") as write_file:
         write_file.write(data)
-
-
 
 @click.command()
 @click.argument('readfile', type=click.Path(exists=True))
