@@ -50,8 +50,11 @@ def generate_lyric(l):
     if (use_hr_dict):
         string = "."
         for letter in l:
-            string += " " + jp_to_hr.jp_to_hr[letter.lower()]
-        return string
+            try:
+                string += jp_to_hr.jp_to_hr[letter.lower()] + " "
+            except KeyError:
+                pass
+        return string[:-1]
     return re.sub(r'\W+', '', l)
 
 def generate_project_start():

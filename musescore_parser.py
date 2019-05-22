@@ -115,7 +115,7 @@ def parse_root(r):
         global set_staff_end_cb
         if (set_staff_end_cb):
             set_staff_end_cb()
-        break
+        # break
 
 def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None,
                 set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None):
