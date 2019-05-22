@@ -22,6 +22,7 @@ dot = 0
 staff_num = 0
 
 output_string = ""
+use_hr_dict = False
 
 def get_time_signature_duration(n, d):
     # print("get_time_signature_duration")
@@ -45,10 +46,12 @@ duration_type = {
 def generate_lyric(l):
     if (l in ["-", "", '', None]):
         return "-"
-    string = "."
-    for letter in l:
-        string += " " + jp_to_hr.jp_to_hr[letter.lower()]
-    return string
+    global use_hr_dict
+    if (use_hr_dict):
+        string = "."
+        for letter in l:
+            string += " " + jp_to_hr.jp_to_hr[letter.lower()]
+        return string
     return re.sub(r'\W+', '', l)
 
 def generate_project_start():
@@ -242,8 +245,11 @@ def write_to_file(file_name, data):
 @click.command()
 @click.argument('readfile', type=click.Path(exists=True))
 @click.argument('writefile', type=click.Path(exists=False))
-def main(readfile, writefile):
+@click.option('-d', "--dict", is_flag=True)
+def main(readfile, writefile, dict):
     global output_string
+    global use_hr_dict
+    use_hr_dict = dict
     output_string += generate_project_start()
     MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot)
     output_string += generate_staff_end()
