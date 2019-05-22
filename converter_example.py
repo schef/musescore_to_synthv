@@ -23,7 +23,7 @@ staff_num = 0
 output_string = ""
 
 def get_time_signature_duration(n, d):
-    print("get_time_signature_duration")
+    # print("get_time_signature_duration")
     if (n == 4 and d == 4):
         return int(ONE_BEAT * 4)
     elif (n == 3 and d == 4):
@@ -154,15 +154,13 @@ def generate_project_end():
 def set_staff_start():
     global onset
     onset = 0
-    print(generate_staff_start())
+    # print(generate_staff_start())
     global output_string
     output_string += generate_staff_start()
     
 def set_staff_end():
-    print(generate_staff_end())
+    # print(generate_staff_end())
     global output_string
-    #remove json "," on list end
-    output_string = output_string[:-2] + '\n'
     output_string += generate_staff_end()
     global staff_num
     staff_num += 1
@@ -200,7 +198,7 @@ def set_pitch(p, d):
     else:
         if (lyric == ''):
             lyric = '-'
-        print(generate_note())
+        # print(generate_note())
         output_string += generate_note()
         onset += duration
         duration = 0
@@ -245,12 +243,8 @@ def main(readfile, writefile):
     global output_string
     output_string += generate_project_start()
     MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot)
-    print(generate_project_end())
-    #remove json "," on list end
-    output_string = output_string[:-2] + '\n'
     output_string += generate_staff_end()
     output_string += generate_project_end()
-
     write_to_file(click.format_filename(writefile), output_string)
 
 if __name__ == '__main__':

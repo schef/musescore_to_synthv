@@ -1,0 +1,1898 @@
+{
+    "version": 7,
+    "meter": [
+        {
+            "measure": 0,
+            "beatPerMeasure": 4,
+            "beatGranularity": 4
+        }
+    ],
+    "tempo": [
+        {
+            "position": 0,
+            "beatPerMinute": 90.0
+        }
+    ],
+    "tracks": [
+        {
+            "name": "Unnamed Track",
+            "dbName": "Eleanor Forte",
+            "color": "15e879",
+            "displayOrder": 0,
+            "dbDefaults": {},
+            "notes": [
+                {
+                    "onset": 0,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 176400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 352800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 529200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 705600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 882000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 1058400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 1234800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 1411200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 1587600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 1764000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 1940400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 2116800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 2293200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 2469600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 2646000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 2998800000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 3175200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 3351600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 3528000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 3704400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 3880800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 4057200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 4233600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 4410000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 4586400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 4762800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 4939200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 5115600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 5292000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 5644800000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 5821200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 5997600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 6174000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 6350400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 6526800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 6703200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 6879600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 7056000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 7232400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 7408800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 7585200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 7761600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 7938000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 8114400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 8290800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 8643600000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 8820000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 8996400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 9172800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 9349200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 9525600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 9702000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 9878400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 10054800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 10231200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 10407600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 10584000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 10760400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 10936800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 11289600000,
+                    "duration": 529200000,
+                    "lyric": "Bla",
+                    "comment": "Bla",
+                    "pitch": 67
+                },
+                {
+                    "onset": 11818800000,
+                    "duration": 529200000,
+                    "lyric": "go",
+                    "comment": "go",
+                    "pitch": 71
+                },
+                {
+                    "onset": 12348000000,
+                    "duration": 705600000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 69
+                },
+                {
+                    "onset": 13053600000,
+                    "duration": 352800000,
+                    "lyric": "nom",
+                    "comment": "nom",
+                    "pitch": 67
+                },
+                {
+                    "onset": 13406400000,
+                    "duration": 352800000,
+                    "lyric": "ko",
+                    "comment": "ko",
+                    "pitch": 67
+                },
+                {
+                    "onset": 13759200000,
+                    "duration": 352800000,
+                    "lyric": "ji",
+                    "comment": "ji",
+                    "pitch": 67
+                },
+                {
+                    "onset": 14112000000,
+                    "duration": 352800000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 69
+                },
+                {
+                    "onset": 14464800000,
+                    "duration": 176400000,
+                    "lyric": "sla",
+                    "comment": "sla",
+                    "pitch": 67
+                },
+                {
+                    "onset": 14641200000,
+                    "duration": 352800000,
+                    "lyric": "ša",
+                    "comment": "ša",
+                    "pitch": 69
+                },
+                {
+                    "onset": 14994000000,
+                    "duration": 352800000,
+                    "lyric": "glas",
+                    "comment": "glas",
+                    "pitch": 67
+                },
+                {
+                    "onset": 15346800000,
+                    "duration": 352800000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 69
+                },
+                {
+                    "onset": 15699600000,
+                    "duration": 352800000,
+                    "lyric": "pa",
+                    "comment": "pa",
+                    "pitch": 71
+                },
+                {
+                    "onset": 16052400000,
+                    "duration": 529200000,
+                    "lyric": "kih",
+                    "comment": "kih",
+                    "pitch": 71
+                },
+                {
+                    "onset": 16934400000,
+                    "duration": 529200000,
+                    "lyric": "I",
+                    "comment": "I,",
+                    "pitch": 67
+                },
+                {
+                    "onset": 17463600000,
+                    "duration": 529200000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 71
+                },
+                {
+                    "onset": 17992800000,
+                    "duration": 705600000,
+                    "lyric": "ho",
+                    "comment": "ho",
+                    "pitch": 69
+                },
+                {
+                    "onset": 18698400000,
+                    "duration": 352800000,
+                    "lyric": "di",
+                    "comment": "di",
+                    "pitch": 67
+                },
+                {
+                    "onset": 19051200000,
+                    "duration": 352800000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67
+                },
+                {
+                    "onset": 19404000000,
+                    "duration": 352800000,
+                    "lyric": "na",
+                    "comment": "na",
+                    "pitch": 67
+                },
+                {
+                    "onset": 19756800000,
+                    "duration": 352800000,
+                    "lyric": "pu",
+                    "comment": "pu",
+                    "pitch": 69
+                },
+                {
+                    "onset": 20109600000,
+                    "duration": 176400000,
+                    "lyric": "tu",
+                    "comment": "tu",
+                    "pitch": 67
+                },
+                {
+                    "onset": 20286000000,
+                    "duration": 352800000,
+                    "lyric": "gre",
+                    "comment": "gre",
+                    "pitch": 66
+                },
+                {
+                    "onset": 20638800000,
+                    "duration": 352800000,
+                    "lyric": "šni",
+                    "comment": "šni",
+                    "pitch": 67
+                },
+                {
+                    "onset": 20991600000,
+                    "duration": 529200000,
+                    "lyric": "čkom",
+                    "comment": "čkom",
+                    "pitch": 67
+                },
+                {
+                    "onset": 22579200000,
+                    "duration": 529200000,
+                    "lyric": "Svo",
+                    "comment": "Svo",
+                    "pitch": 67
+                },
+                {
+                    "onset": 23108400000,
+                    "duration": 529200000,
+                    "lyric": "je",
+                    "comment": "je",
+                    "pitch": 71
+                },
+                {
+                    "onset": 23637600000,
+                    "duration": 705600000,
+                    "lyric": "da",
+                    "comment": "da",
+                    "pitch": 69
+                },
+                {
+                    "onset": 24343200000,
+                    "duration": 352800000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 67
+                },
+                {
+                    "onset": 24696000000,
+                    "duration": 352800000,
+                    "lyric": "on",
+                    "comment": "on",
+                    "pitch": 67
+                },
+                {
+                    "onset": 25048800000,
+                    "duration": 352800000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 67
+                },
+                {
+                    "onset": 25401600000,
+                    "duration": 352800000,
+                    "lyric": "pro",
+                    "comment": "pro",
+                    "pitch": 69
+                },
+                {
+                    "onset": 25754400000,
+                    "duration": 176400000,
+                    "lyric": "vo",
+                    "comment": "vo",
+                    "pitch": 67
+                },
+                {
+                    "onset": 25930800000,
+                    "duration": 352800000,
+                    "lyric": "di",
+                    "comment": "di",
+                    "pitch": 69
+                },
+                {
+                    "onset": 26283600000,
+                    "duration": 352800000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 67
+                },
+                {
+                    "onset": 26636400000,
+                    "duration": 352800000,
+                    "lyric": "ru",
+                    "comment": "ru",
+                    "pitch": 69
+                },
+                {
+                    "onset": 26989200000,
+                    "duration": 352800000,
+                    "lyric": "ga",
+                    "comment": "ga",
+                    "pitch": 71
+                },
+                {
+                    "onset": 27342000000,
+                    "duration": 529200000,
+                    "lyric": "nju",
+                    "comment": "nju",
+                    "pitch": 71
+                },
+                {
+                    "onset": 28224000000,
+                    "duration": 529200000,
+                    "lyric": "već",
+                    "comment": "već",
+                    "pitch": 67
+                },
+                {
+                    "onset": 28753200000,
+                    "duration": 529200000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 71
+                },
+                {
+                    "onset": 29282400000,
+                    "duration": 705600000,
+                    "lyric": "ži",
+                    "comment": "ži",
+                    "pitch": 69
+                },
+                {
+                    "onset": 29988000000,
+                    "duration": 352800000,
+                    "lyric": "va",
+                    "comment": "va",
+                    "pitch": 67
+                },
+                {
+                    "onset": 30340800000,
+                    "duration": 352800000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67
+                },
+                {
+                    "onset": 30693600000,
+                    "duration": 352800000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 67
+                },
+                {
+                    "onset": 31046400000,
+                    "duration": 352800000,
+                    "lyric": "Bo",
+                    "comment": "Bo",
+                    "pitch": 69
+                },
+                {
+                    "onset": 31399200000,
+                    "duration": 176400000,
+                    "lyric": "žjem",
+                    "comment": "žjem",
+                    "pitch": 67
+                },
+                {
+                    "onset": 31575600000,
+                    "duration": 352800000,
+                    "lyric": "za",
+                    "comment": "za",
+                    "pitch": 66
+                },
+                {
+                    "onset": 31928400000,
+                    "duration": 352800000,
+                    "lyric": "ko",
+                    "comment": "ko",
+                    "pitch": 67
+                },
+                {
+                    "onset": 32281200000,
+                    "duration": 529200000,
+                    "lyric": "nu",
+                    "comment": "nu",
+                    "pitch": 67
+                },
+                {
+                    "onset": 33163200000,
+                    "duration": 352800000,
+                    "lyric": "Ka",
+                    "comment": "Ka",
+                    "pitch": 62
+                },
+                {
+                    "onset": 33516000000,
+                    "duration": 352800000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 62
+                },
+                {
+                    "onset": 33868800000,
+                    "duration": 1058400000,
+                    "lyric": "sta",
+                    "comment": "sta",
+                    "pitch": 74
+                },
+                {
+                    "onset": 34927200000,
+                    "duration": 1058400000,
+                    "lyric": "blo",
+                    "comment": "blo",
+                    "pitch": 71
+                },
+                {
+                    "onset": 36338400000,
+                    "duration": 352800000,
+                    "lyric": "kraj",
+                    "comment": "kraj",
+                    "pitch": 71
+                },
+                {
+                    "onset": 36691200000,
+                    "duration": 352800000,
+                    "lyric": "vo",
+                    "comment": "vo",
+                    "pitch": 69
+                },
+                {
+                    "onset": 37044000000,
+                    "duration": 176400000,
+                    "lyric": "de",
+                    "comment": "de",
+                    "pitch": 67
+                },
+                {
+                    "onset": 37220400000,
+                    "duration": 529200000,
+                    "lyric": "što",
+                    "comment": "što",
+                    "pitch": 62
+                },
+                {
+                    "onset": 37749600000,
+                    "duration": 705600000,
+                    "lyric": "te",
+                    "comment": "te",
+                    "pitch": 69
+                },
+                {
+                    "onset": 38455200000,
+                    "duration": 352800000,
+                    "lyric": "če",
+                    "comment": "če",
+                    "pitch": 67
+                },
+                {
+                    "onset": 38808000000,
+                    "duration": 352800000,
+                    "lyric": "ni",
+                    "comment": "ni",
+                    "pitch": 62
+                },
+                {
+                    "onset": 39160800000,
+                    "duration": 352800000,
+                    "lyric": "kad",
+                    "comment": "kad",
+                    "pitch": 62
+                },
+                {
+                    "onset": 39513600000,
+                    "duration": 1058400000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 74
+                },
+                {
+                    "onset": 40572000000,
+                    "duration": 1058400000,
+                    "lyric": "ma",
+                    "comment": "ma",
+                    "pitch": 71
+                },
+                {
+                    "onset": 41983200000,
+                    "duration": 352800000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 71
+                },
+                {
+                    "onset": 42336000000,
+                    "duration": 352800000,
+                    "lyric": "ve",
+                    "comment": "ve",
+                    "pitch": 69
+                },
+                {
+                    "onset": 42688800000,
+                    "duration": 176400000,
+                    "lyric": "nu",
+                    "comment": "nu",
+                    "pitch": 67
+                },
+                {
+                    "onset": 42865200000,
+                    "duration": 529200000,
+                    "lyric": "lo",
+                    "comment": "lo",
+                    "pitch": 62
+                },
+                {
+                    "onset": 43394400000,
+                    "duration": 705600000,
+                    "lyric": "li",
+                    "comment": "li",
+                    "pitch": 69
+                },
+                {
+                    "onset": 44100000000,
+                    "duration": 352800000,
+                    "lyric": "šće",
+                    "comment": "šće",
+                    "pitch": 67
+                },
+                {
+                    "onset": 45158400000,
+                    "duration": 176400000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 67
+                },
+                {
+                    "onset": 45334800000,
+                    "duration": 352800000,
+                    "lyric": "svoj",
+                    "comment": "svoj",
+                    "pitch": 67
+                },
+                {
+                    "onset": 45687600000,
+                    "duration": 352800000,
+                    "lyric": "čas",
+                    "comment": "čas",
+                    "pitch": 67
+                },
+                {
+                    "onset": 46040400000,
+                    "duration": 352800000,
+                    "lyric": "plod",
+                    "comment": "plod",
+                    "pitch": 67
+                },
+                {
+                    "onset": 46393200000,
+                    "duration": 352800000,
+                    "lyric": "do",
+                    "comment": "do",
+                    "pitch": 69
+                },
+                {
+                    "onset": 46746000000,
+                    "duration": 176400000,
+                    "lyric": "no",
+                    "comment": "no",
+                    "pitch": 71
+                },
+                {
+                    "onset": 46922400000,
+                    "duration": 352800000,
+                    "lyric": "si",
+                    "comment": "si",
+                    "pitch": 69
+                },
+                {
+                    "onset": 47980800000,
+                    "duration": 176400000,
+                    "lyric": "sve",
+                    "comment": "sve",
+                    "pitch": 67
+                },
+                {
+                    "onset": 48157200000,
+                    "duration": 352800000,
+                    "lyric": "što",
+                    "comment": "što",
+                    "pitch": 67
+                },
+                {
+                    "onset": 48510000000,
+                    "duration": 352800000,
+                    "lyric": "ra",
+                    "comment": "ra",
+                    "pitch": 67
+                },
+                {
+                    "onset": 48862800000,
+                    "duration": 352800000,
+                    "lyric": "di",
+                    "comment": "di",
+                    "pitch": 67
+                },
+                {
+                    "onset": 49215600000,
+                    "duration": 352800000,
+                    "lyric": "do",
+                    "comment": "do",
+                    "pitch": 69
+                },
+                {
+                    "onset": 49568400000,
+                    "duration": 352800000,
+                    "lyric": "brim",
+                    "comment": "brim",
+                    "pitch": 67
+                },
+                {
+                    "onset": 49921200000,
+                    "duration": 352800000,
+                    "lyric": "u",
+                    "comment": "u",
+                    "pitch": 66
+                },
+                {
+                    "onset": 50274000000,
+                    "duration": 352800000,
+                    "lyric": "ro",
+                    "comment": "ro",
+                    "pitch": 67
+                },
+                {
+                    "onset": 50626800000,
+                    "duration": 1587600000,
+                    "lyric": "di",
+                    "comment": "di",
+                    "pitch": 67
+                },
+                {
+                    "onset": 53625600000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 53802000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 53978400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 54154800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 54331200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 54507600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 54684000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 54860400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 55036800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 55213200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 55389600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 55566000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 55742400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 55918800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 56095200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 56271600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 56624400000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 56800800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 56977200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 57153600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 57330000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 57506400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 57682800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 57859200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 58035600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 58212000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 58388400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 58564800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 58741200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 58917600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 59270400000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 59446800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 59623200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 59799600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 59976000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 60152400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 60328800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 60505200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 60681600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 60858000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 61034400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 61210800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 61387200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 61563600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 61740000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 61916400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 62269200000,
+                    "duration": 176400000,
+                    "lyric": "A",
+                    "comment": "A",
+                    "pitch": 67
+                },
+                {
+                    "onset": 62445600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 62622000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 62798400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 62974800000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 63151200000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 63327600000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 63504000000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 63680400000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 63856800000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 64033200000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 64209600000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 64386000000,
+                    "duration": 176400000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 67
+                },
+                {
+                    "onset": 64562400000,
+                    "duration": 176400000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 66
+                },
+                {
+                    "onset": 64915200000,
+                    "duration": 529200000,
+                    "lyric": "Ni",
+                    "comment": "Ni",
+                    "pitch": 67
+                },
+                {
+                    "onset": 65444400000,
+                    "duration": 529200000,
+                    "lyric": "su",
+                    "comment": "su",
+                    "pitch": 71
+                },
+                {
+                    "onset": 65973600000,
+                    "duration": 705600000,
+                    "lyric": "ta",
+                    "comment": "ta",
+                    "pitch": 69
+                },
+                {
+                    "onset": 66679200000,
+                    "duration": 352800000,
+                    "lyric": "kvi",
+                    "comment": "kvi,",
+                    "pitch": 67
+                },
+                {
+                    "onset": 67032000000,
+                    "duration": 352800000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67
+                },
+                {
+                    "onset": 67384800000,
+                    "duration": 352800000,
+                    "lyric": "ne",
+                    "comment": "ne,",
+                    "pitch": 67
+                },
+                {
+                    "onset": 67737600000,
+                    "duration": 352800000,
+                    "lyric": "ni",
+                    "comment": "ni",
+                    "pitch": 69
+                },
+                {
+                    "onset": 68090400000,
+                    "duration": 176400000,
+                    "lyric": "su",
+                    "comment": "su",
+                    "pitch": 67
+                },
+                {
+                    "onset": 68266800000,
+                    "duration": 352800000,
+                    "lyric": "ta",
+                    "comment": "ta",
+                    "pitch": 69
+                },
+                {
+                    "onset": 68619600000,
+                    "duration": 352800000,
+                    "lyric": "kvi",
+                    "comment": "kvi",
+                    "pitch": 67
+                },
+                {
+                    "onset": 68972400000,
+                    "duration": 352800000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 69
+                },
+                {
+                    "onset": 69325200000,
+                    "duration": 352800000,
+                    "lyric": "pa",
+                    "comment": "pa",
+                    "pitch": 71
+                },
+                {
+                    "onset": 69678000000,
+                    "duration": 529200000,
+                    "lyric": "ki",
+                    "comment": "ki",
+                    "pitch": 71
+                },
+                {
+                    "onset": 70560000000,
+                    "duration": 529200000,
+                    "lyric": "ka",
+                    "comment": "ka",
+                    "pitch": 67
+                },
+                {
+                    "onset": 71089200000,
+                    "duration": 529200000,
+                    "lyric": "o",
+                    "comment": "o",
+                    "pitch": 71
+                },
+                {
+                    "onset": 71618400000,
+                    "duration": 705600000,
+                    "lyric": "plje",
+                    "comment": "plje",
+                    "pitch": 69
+                },
+                {
+                    "onset": 72324000000,
+                    "duration": 352800000,
+                    "lyric": "vu",
+                    "comment": "vu",
+                    "pitch": 67
+                },
+                {
+                    "onset": 72676800000,
+                    "duration": 352800000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67
+                },
+                {
+                    "onset": 73029600000,
+                    "duration": 352800000,
+                    "lyric": "njih",
+                    "comment": "njih",
+                    "pitch": 67
+                },
+                {
+                    "onset": 73382400000,
+                    "duration": 352800000,
+                    "lyric": "vje",
+                    "comment": "vje",
+                    "pitch": 69
+                },
+                {
+                    "onset": 73735200000,
+                    "duration": 176400000,
+                    "lyric": "tar",
+                    "comment": "tar",
+                    "pitch": 67
+                },
+                {
+                    "onset": 73911600000,
+                    "duration": 352800000,
+                    "lyric": "ra",
+                    "comment": "ra",
+                    "pitch": 66
+                },
+                {
+                    "onset": 74264400000,
+                    "duration": 352800000,
+                    "lyric": "zno",
+                    "comment": "zno",
+                    "pitch": 67
+                },
+                {
+                    "onset": 74617200000,
+                    "duration": 529200000,
+                    "lyric": "si",
+                    "comment": "si",
+                    "pitch": 67
+                },
+                {
+                    "onset": 76204800000,
+                    "duration": 529200000,
+                    "lyric": "O",
+                    "comment": "O",
+                    "pitch": 67
+                },
+                {
+                    "onset": 76734000000,
+                    "duration": 529200000,
+                    "lyric": "ni",
+                    "comment": "ni",
+                    "pitch": 71
+                },
+                {
+                    "onset": 77263200000,
+                    "duration": 705600000,
+                    "lyric": "ne",
+                    "comment": "ne",
+                    "pitch": 69
+                },
+                {
+                    "onset": 77968800000,
+                    "duration": 352800000,
+                    "lyric": "će",
+                    "comment": "će",
+                    "pitch": 67
+                },
+                {
+                    "onset": 78321600000,
+                    "duration": 352800000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67
+                },
+                {
+                    "onset": 78674400000,
+                    "duration": 352800000,
+                    "lyric": "na",
+                    "comment": "na",
+                    "pitch": 67
+                },
+                {
+                    "onset": 79027200000,
+                    "duration": 352800000,
+                    "lyric": "su",
+                    "comment": "su",
+                    "pitch": 69
+                },
+                {
+                    "onset": 79380000000,
+                    "duration": 176400000,
+                    "lyric": "du",
+                    "comment": "du",
+                    "pitch": 67
+                },
+                {
+                    "onset": 79556400000,
+                    "duration": 352800000,
+                    "lyric": "Bo",
+                    "comment": "Bo",
+                    "pitch": 69
+                },
+                {
+                    "onset": 79909200000,
+                    "duration": 352800000,
+                    "lyric": "žjem",
+                    "comment": "žjem",
+                    "pitch": 67
+                },
+                {
+                    "onset": 80262000000,
+                    "duration": 352800000,
+                    "lyric": "op",
+                    "comment": "op",
+                    "pitch": 69
+                },
+                {
+                    "onset": 80614800000,
+                    "duration": 352800000,
+                    "lyric": "sta",
+                    "comment": "sta",
+                    "pitch": 71
+                },
+                {
+                    "onset": 80967600000,
+                    "duration": 529200000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 71
+                },
+                {
+                    "onset": 81849600000,
+                    "duration": 529200000,
+                    "lyric": "Ja",
+                    "comment": "Ja",
+                    "pitch": 67
+                },
+                {
+                    "onset": 82378800000,
+                    "duration": 529200000,
+                    "lyric": "hvi",
+                    "comment": "hvi",
+                    "pitch": 71
+                },
+                {
+                    "onset": 82908000000,
+                    "duration": 705600000,
+                    "lyric": "do",
+                    "comment": "do",
+                    "pitch": 69
+                },
+                {
+                    "onset": 83613600000,
+                    "duration": 352800000,
+                    "lyric": "bro",
+                    "comment": "bro",
+                    "pitch": 67
+                },
+                {
+                    "onset": 83966400000,
+                    "duration": 352800000,
+                    "lyric": "po",
+                    "comment": "po",
+                    "pitch": 67
+                },
+                {
+                    "onset": 84319200000,
+                    "duration": 352800000,
+                    "lyric": "znat",
+                    "comment": "znat
+",
+                    "pitch": 67
+                },
+                {
+                    "onset": 84672000000,
+                    "duration": 352800000,
+                    "lyric": "je",
+                    "comment": "je",
+                    "pitch": 69
+                },
+                {
+                    "onset": 85024800000,
+                    "duration": 176400000,
+                    "lyric": "put",
+                    "comment": "put",
+                    "pitch": 67
+                },
+                {
+                    "onset": 85201200000,
+                    "duration": 352800000,
+                    "lyric": "pra",
+                    "comment": "pra",
+                    "pitch": 66
+                },
+                {
+                    "onset": 85554000000,
+                    "duration": 352800000,
+                    "lyric": "ve",
+                    "comment": "ve",
+                    "pitch": 67
+                },
+                {
+                    "onset": 85906800000,
+                    "duration": 529200000,
+                    "lyric": "dnih",
+                    "comment": "dnih",
+                    "pitch": 67
+                },
+                {
+                    "onset": 86788800000,
+                    "duration": 352800000,
+                    "lyric": "Ka",
+                    "comment": "Ka",
+                    "pitch": 62
+                },
+                {
+                    "onset": 87141600000,
+                    "duration": 352800000,
+                    "lyric": "je",
+                    "comment": "je",
+                    "pitch": 62
+                },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+    ],
+    "instrumental": {
+        "filename": "",
+        "offset": 0.0
+    },
+    "mixer": {
+        "gainInstrumentalDecibel": 0.0,
+        "gainVocalMasterDecibel": 0.0,
+        "instrumentalMuted": false,
+        "vocalMasterMuted": false
+    }
+}
