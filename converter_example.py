@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import click
+import re
 from txt_colors import txt
 import musescore_parser as MP
 
@@ -22,11 +24,11 @@ output_string = ""
 
 def get_time_signature_duration(n, d):
     print("get_time_signature_duration")
-    if (n == 4 and n == 4):
+    if (n == 4 and d == 4):
         return int(ONE_BEAT * 4)
-    elif (n == 3 and n == 4):
+    elif (n == 3 and d == 4):
         return int(ONE_BEAT * 3)
-    elif (n == 6 and n == 8):
+    elif (n == 6 and d == 8):
         return int(6 * int(ONE_BEAT / 2))
 
 duration_type = {
@@ -39,55 +41,10 @@ duration_type = {
     '32nd' : int(ONE_BEAT / 8)
 }
 
-jp_to_hr = {
-    'a' : 'a',
-    'b' : 'b',
-    'c' : 'ts',
-    'č' : 'ch',
-    'ć' : 'ch',
-    'd' : 'd',
-    'đ' : 'j',
-    'e' : 'e',
-    'f' : 'f',
-    'g' : 'g',
-    'h' : 'h',
-    'i' : 'i',
-    'j' : 'y',
-    'k' : 'k',
-    'l' : 'r',
-    'm' : 'm',
-    'n' : 'n',
-    'o' : 'o',
-    'p' : 'p',
-    'r' : 'r',
-    's' : 's',
-    'š' : 'sh',
-    't' : 't',
-    'u' : 'u',
-    'v' : 'v',
-    'z' : 'z',
-    'ž' : 'sh',
-    '-' : '-'
-}
-
-def get_vocal(l):
-    for letter in reversed(l):
-        if (letter in ['a', 'e', 'i', 'o', 'u']):
-            return letter
-    return('-')
-
 def generate_lyric(l):
-    if (l == '-'):
-        return(get_vocal(last_lyric))
-    string = '.'
-    for letter in l:
-        if (l == ''):
-            pass
-        elif (l == 'y' and string[-1] == i):
-            string = string[:-1]
-        string += jp_to_hr[letter.lower()]
-        string += ' '
-    return string[:-1]
+    if (l in ["-", "", '', None]):
+        return "-"
+    return re.sub(r'\W+', '', l)
 
 def generate_project_start():
     string = ''
@@ -114,7 +71,7 @@ def generate_staff_start():
     string = ''
     string += '        {' + '\n'
     string += '            "name": "Unnamed Track",' + '\n'
-    string += '            "dbName": "\u30b2\u30f3\u30d6 GENBU",' + '\n'
+    string += '            "dbName": "Eleanor Forte",' + '\n'
     string += '            "color": "15e879",' + '\n'
     string += '            "displayOrder": ' + str(staff_num) + ',' + '\n'
     string += '            "dbDefaults": {},' + '\n'
@@ -279,13 +236,22 @@ def write_to_file(file_name, data):
     with open(file_name, "w") as write_file:
         write_file.write(data)
 
-print(generate_project_start())
-output_string += generate_project_start()
-MP.parse_xml('examples/musicxml.mscx', set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot)
-print(generate_project_end())
-#remove json "," on list end
-output_string = output_string[:-2] + '\n'
-output_string += generate_staff_end()
-output_string += generate_project_end()
 
-write_to_file("test.s5p", output_string)
+
+@click.command()
+@click.argument('readfile', type=click.Path(exists=True))
+@click.argument('writefile', type=click.Path(exists=False))
+def main(readfile, writefile):
+    global output_string
+    output_string += generate_project_start()
+    MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot)
+    print(generate_project_end())
+    #remove json "," on list end
+    output_string = output_string[:-2] + '\n'
+    output_string += generate_staff_end()
+    output_string += generate_project_end()
+
+    write_to_file(click.format_filename(writefile), output_string)
+
+if __name__ == '__main__':
+    main()
