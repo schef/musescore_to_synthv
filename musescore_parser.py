@@ -23,7 +23,7 @@ def set_time_signature(n, d):
 def parse_time_signature(v):
     n = d = ""
     for t in v.findall("./"):
-        print(txt.TAB * 4, txt.CBEIGE + t.tag + txt.CEND, [t.attrib, t.tail.strip(), t.text.strip()])
+        print(txt.TAB * 4, txt.CBEIGE + t.tag + txt.CEND, [t.attrib, t.tail.strip(), str(t.text).strip()])
         if (t.tag == "sigN"):
             n = t.text
         elif (t.tag == "sigD"):
@@ -57,7 +57,7 @@ def set_dot(num):
 def parse_chord(v):
     duration = ""
     for c in v.findall("./"):
-        print(txt.TAB * 4, txt.CBEIGE + c.tag + txt.CEND, [c.attrib, c.tail.strip(), c.text.strip()])
+        print(txt.TAB * 4, txt.CBEIGE + c.tag + txt.CEND, [c.attrib, c.tail.strip(), str(c.text).strip()])
         if (c.tag == "durationType"):
             duration = c.text
         elif (c.tag == "dots"):
@@ -69,10 +69,10 @@ def parse_chord(v):
                     set_lyric(l.text)
         elif (c.tag == "Note"):
             for n in c.findall("./"):
-                print(txt.TAB * 5, txt.CRED2 + n.tag + txt.CEND, [n.attrib, n.tail.strip(), n.text.strip()])
+                print(txt.TAB * 5, txt.CRED2 + n.tag + txt.CEND, [n.attrib, n.tail.strip(), str(n.text).strip()])
                 if (n.tag == "Spanner" and n.attrib['type'] == "Tie"):
                     for s in n.findall("./"):
-                        print(txt.TAB * 6, s.tag, [s.attrib, s.tail.strip(), s.text.strip()])
+                        print(txt.TAB * 6, s.tag, [s.attrib, s.tail.strip(), str(s.text).strip()])
                         if (s.tag == "next"):
                             set_tie()
                 elif (n.tag == "pitch"):
@@ -86,26 +86,26 @@ def set_rest(duration):
 
 def parse_rest(v):
     for r in v.findall("./"):
-        print(txt.TAB * 4, txt.CBEIGE + r.tag + txt.CEND, [r.attrib, r.tail.strip(), r.text.strip()])
+        print(txt.TAB * 4, txt.CBEIGE + r.tag + txt.CEND, [r.attrib, r.tail.strip(), str(r.text).strip()])
         if (r.tag == "durationType"):
             set_rest(r.text)
 
 def parse_root(r):
     for s in r.findall("./Score/Staff"):
-        print(txt.CBLUE + s.tag + txt.CEND, [s.attrib, s.tail.strip(), s.text.strip()])
+        print(txt.CBLUE + s.tag + txt.CEND, [s.attrib, s.tail.strip(), str(s.text).strip()])
         m_count = 0
         global set_staff_start_cb
         if (set_staff_start_cb):
             set_staff_start_cb()
         for m in s.findall("./"):
-            print(txt.TAB * 1, txt.CGREEN + m.tag + txt.CEND, m_count, [m.attrib, m.tail.strip(), m.text.strip()])
+            print(txt.TAB * 1, txt.CGREEN + m.tag + txt.CEND, m_count, [m.attrib, m.tail.strip(), str(m.text).strip()])
             if (m.tag == "Measure"):
                 m_count += 1
                 for w in m.findall("./"):
                     print(txt.TAB * 2, txt.CVIOLET + w.tag + txt.CEND, [w.attrib, w.tail.strip(), str(w.text).strip()])
                     if (w.tag == "voice"):
                         for v in w.findall("./"):
-                            print(txt.TAB * 3, txt.CYELLOW + v.tag + txt.CEND, [v.attrib, v.tail.strip(), v.text.strip()])
+                            print(txt.TAB * 3, txt.CYELLOW + v.tag + txt.CEND, [v.attrib, v.tail.strip(), str(v.text).strip()])
                             if (v.tag == "TimeSig"):
                                 parse_time_signature(v)
                             elif (v.tag == "Chord"):
