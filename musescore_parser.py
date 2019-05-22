@@ -102,7 +102,7 @@ def parse_root(r):
             if (m.tag == "Measure"):
                 m_count += 1
                 for w in m.findall("./"):
-                    print(txt.TAB * 2, txt.CVIOLET + w.tag + txt.CEND, [w.attrib, w.tail.strip(), w.text.strip()])
+                    print(txt.TAB * 2, txt.CVIOLET + w.tag + txt.CEND, [w.attrib, w.tail.strip(), str(w.text).strip()])
                     if (w.tag == "voice"):
                         for v in w.findall("./"):
                             print(txt.TAB * 3, txt.CYELLOW + v.tag + txt.CEND, [v.attrib, v.tail.strip(), v.text.strip()])
