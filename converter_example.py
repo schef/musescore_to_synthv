@@ -96,7 +96,9 @@ def generate_note():
     string += '                    "duration": ' + str(duration) + ',' + '\n'
     string += '                    "lyric": "' + generate_lyric(lyric) + '",' + '\n'
     string += '                    "comment": "' + str(lyric) + '",' + '\n'
-    string += '                    "pitch": ' + str(pitch) + '' + '\n'
+    string += '                    "pitch": ' + str(pitch) + ',' + '\n'
+    string += '                    "dF0Vbr": 0.0' + ',' + '\n'
+    string += '                    "dF0Jitter": 0.0' + '' + '\n'
     string += '                },' + '\n'
     return string
 

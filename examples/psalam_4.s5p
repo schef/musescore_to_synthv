@@ -229,7 +229,7 @@
                     "duration": 705600000,
                     "lyric": ".b uw",
                     "comment": "bu",
-                    "pitch": 67
+                    "pitch": 65
                 },
                 {
                     "onset": 20109600000,
@@ -453,7 +453,7 @@
                     "duration": 705600000,
                     "lyric": ".b uw",
                     "comment": "bu",
-                    "pitch": 67
+                    "pitch": 65
                 },
                 {
                     "onset": 42688800000,
@@ -789,7 +789,7 @@
                     "duration": 705600000,
                     "lyric": ".t eh",
                     "comment": "te",
-                    "pitch": 67
+                    "pitch": 65
                 },
                 {
                     "onset": 79380000000,
@@ -894,7 +894,7 @@
                     "duration": 2116800000,
                     "lyric": ".m eh",
                     "comment": "me",
-                    "pitch": 65
+                    "pitch": 67
                 },
             ],
             "gsEvents": null,
@@ -1713,7 +1713,7 @@
                     "duration": 705600000,
                     "lyric": ".t eh",
                     "comment": "te",
-                    "pitch": 67
+                    "pitch": 65
                 },
                 {
                     "onset": 79380000000,
@@ -1818,7 +1818,7 @@
                     "duration": 2116800000,
                     "lyric": ".m eh",
                     "comment": "me",
-                    "pitch": 65
+                    "pitch": 67
                 },
             ],
             "gsEvents": null,
@@ -2637,7 +2637,7 @@
                     "duration": 705600000,
                     "lyric": ".t eh",
                     "comment": "te",
-                    "pitch": 55
+                    "pitch": 53
                 },
                 {
                     "onset": 79380000000,
@@ -2742,7 +2742,7 @@
                     "duration": 2116800000,
                     "lyric": ".m eh",
                     "comment": "me",
-                    "pitch": 53
+                    "pitch": 55
                 },
             ],
             "gsEvents": null,
@@ -3561,7 +3561,7 @@
                     "duration": 705600000,
                     "lyric": ".t eh",
                     "comment": "te",
-                    "pitch": 55
+                    "pitch": 53
                 },
                 {
                     "onset": 79380000000,
@@ -3666,7 +3666,7 @@
                     "duration": 2116800000,
                     "lyric": ".m eh",
                     "comment": "me",
-                    "pitch": 53
+                    "pitch": 55
                 },
             ],
             "gsEvents": null,
