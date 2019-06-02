@@ -20,6 +20,7 @@ comment = ''
 tie = False
 dot = 0
 staff_num = 0
+tuplet = False
 
 output_string = ""
 use_hr_dict = False
@@ -206,6 +207,9 @@ def set_pitch(p, d):
         duration += int(duration_type[d] / 8)
     dot = 0
 
+    if (tuplet):
+        duration = duration * 2 / 3
+
     if (tie):
         tie = False
     else:
@@ -220,6 +224,9 @@ def set_pitch(p, d):
 def set_rest(d):
     global onset
     global dot
+
+    duration = duration_type[d]
+
     if (dot > 0):
         duration += int(duration_type[d] / 2)
     if (dot > 1):
@@ -227,7 +234,11 @@ def set_rest(d):
     if (dot > 2):
         duration += int(duration_type[d] / 8)
     dot = 0
-    onset += duration_type[d]
+
+    if (tuplet):
+        duration = duration * 2 / 3
+
+    onset += duration
 
 def set_lyric(l):
     global lyric
@@ -243,6 +254,13 @@ def set_dot(num):
     global dot
     dot = int(num)
 
+def set_tuplet(status):
+    global tuplet
+    if (status):
+        tuplet = True
+    else:
+        tuplet = False
+
 def write_to_file(file_name, data):
     with open(file_name, "w") as write_file:
         write_file.write(data)
@@ -256,7 +274,7 @@ def main(readfile, writefile, dict):
     global use_hr_dict
     use_hr_dict = dict
     output_string += generate_project_start()
-    MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot)
+    MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot, set_tuplet)
     output_string += generate_staff_end()
     output_string += generate_project_end()
     write_to_file(click.format_filename(writefile), output_string)

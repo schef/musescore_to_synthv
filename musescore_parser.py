@@ -11,6 +11,7 @@ set_rest_cb = None
 set_lyric_cb = None
 set_tie_cb = None
 set_dot_cb = None
+set_tuplet_cb = None
 
 SET_TAB = txt.TAB * 30
 
@@ -112,13 +113,24 @@ def parse_root(r):
                                 parse_chord(v)
                             elif (v.tag == "Rest"):
                                 parse_rest(v)
+                            elif (v.tag == "Tuplet"):
+                                set_tuplet(True)
+                            elif (v.tag == "endTuplet"):
+                                set_tuplet(False)
+
         global set_staff_end_cb
         if (set_staff_end_cb):
             set_staff_end_cb()
         # break
 
+def set_tuplet(status):
+    print(SET_TAB + txt.CRED + "set_tuplet" + txt.CEND, status)
+    global set_tuplet_cb
+    if set_tuplet_cb:
+        set_tuplet_cb(status)
+
 def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None,
-                set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None):
+                set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None, set_tuplet_func = False):
     if (set_staff_start_func):
         global set_staff_start_cb
         set_staff_start_cb = set_staff_start_func
@@ -143,6 +155,9 @@ def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, 
     if (set_dot_func):
         global set_dot_cb
         set_dot_cb = set_dot_func
+    if (set_tuplet_func):
+        global set_tuplet_cb
+        set_tuplet_cb = set_tuplet_func
 
     tree = ET.parse(xml_file)
     root = tree.getroot()
