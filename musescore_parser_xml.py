@@ -22,7 +22,26 @@ def print_all(tag, tab):
 def write_xml_tree_to_file(xml_tree, file_name):
     xml_tree.write(file_name)
 
+def get_part_staff_ids():
+    ids = [staff.attrib['id'] for staff in root.findall("./Score/Part/Staff[@id]")]
+    return ids
+
+def get_part_staff_by_id(id):
+    try:
+        return root.findall("./Score/Part/Staff[@id='" + id + "']")[0]
+    except:
+        None
+
+def get_staff_by_id(id):
+    try:
+        return root.findall("./Score/Staff[@id='" + id + "']")[0]
+    except:
+        None
+
+def get_measures_from_staff(staff):
+    return staff.findall("./Measure")
+
 if __name__ == "__main__":
-    tree = read_xml_tree_from_file("./tests/xml/basic.xml")
+    tree = read_xml_tree_from_file("./tests/xml/test_title.mscx")
     root = get_xml_root_from_xml_tree(tree)
-    write_xml_tree_to_file(tree, "./tests/xml/basic_copy.xml")
+    # write_xml_tree_to_file(tree, "./tests/xml/test_title_copy.mscx")
