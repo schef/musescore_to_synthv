@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import utils.common
+
 #   <Rest>
 #     <durationType>measure</durationType>
 #     <duration>4/4</duration>
@@ -35,7 +37,7 @@ def handle_elements(element):
     elif (element.tag == "duration"):
         print(element.text)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def parse(rest):
     print(rest.tag)

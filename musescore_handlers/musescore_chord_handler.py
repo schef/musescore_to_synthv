@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import utils.common
+
 '''/museScore/Score/Staff/Measure/voice/Chord'''
 '''/museScore/Score/Staff/Measure/voice/Chord/durationType'''
 '''/museScore/Score/Staff/Measure/voice/Chord/Note'''
@@ -18,8 +20,8 @@
 '''/museScore/Score/Staff/Measure/voice/Chord/Note/Spanner/prev/location'''
 '''/museScore/Score/Staff/Measure/voice/Chord/Note/Spanner/prev/location/fraction'''
 
-def get_elements_from_chord(chord):
-    return chord.findall("./*")
+def get_elements_from_parent(parent):
+    return parent.findall("./*")
 
 def handle_accidental_element(element):
     if (element.tag == "role"):
@@ -27,31 +29,33 @@ def handle_accidental_element(element):
     elif (element.tag == "subtype"):
         print(element.text)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def handle_spanner_next_fraction_element(element):
     if (element.tag == "fraction"):
         print(element.text)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def handle_spanner_next_element(element):
     if (element.tag == "location"):
-        handle_spanner_next_fraction_element(element)
+        for next in get_elements_from_parent(element):
+            handle_spanner_next_fraction_element(next)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
     
 def handle_spanner_prev_fraction_element(element):
     if (element.tag == "fraction"):
         print(element.text)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def handle_spanner_prev_element(element):
     if (element.tag == "location"):
-        handle_spanner_prev_fraction_element(element)
+        for prev in get_elements_from_parent(element):
+            handle_spanner_prev_fraction_element(prev)
     else:
-        print(__file__, element.tag, "not implemented")  
+        print(utils.common.dbg(), element.tag, "not implemented")  
 
 def handle_spanner_element(element):
     if (element.tag == "Tie"):
@@ -63,7 +67,7 @@ def handle_spanner_element(element):
     elif (element.tag == "prev"):
         handle_spanner_prev_element(element)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def handle_note_element(element):
     if (element.tag == "pitch"):
@@ -71,22 +75,24 @@ def handle_note_element(element):
     elif (element.tag == "tpc"):
         print(element.text)
     elif (element.tag == "Accidental"):
-        handle_accidental_element(element)
+        for accidental in get_elements_from_parent(element):
+            handle_accidental_element(accidental)
     elif (element.tag == "Spanner"):
-        handle_spanner_element(element)
+        for spanner in get_elements_from_parent(element):
+            handle_spanner_element(spanner)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def handle_element(element):
     if (element.tag == "durationType"):
         print(element.text)
     elif (element.tag == "Note"):
-        handle_note_element(element)
+        for note in get_elements_from_parent(element):
+            handle_note_element(note)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def parse(chord):
     print(chord.tag)
-    elements = get_elements_from_chord(chord)
-    for e in elements:
+    for e in get_elements_from_parent(chord):
         handle_element(e)

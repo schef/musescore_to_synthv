@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import utils.common
+
 import xml.etree.ElementTree as ET
 import musescore_handlers.musescore_keysig_handler as keysig_handler
 import musescore_handlers.musescore_timesig_handler as timesig_handler
@@ -72,7 +74,7 @@ def handle_voice_element(element):
     elif (element.tag == "Rest"):
         rest_handler.parse(element)
     else:
-        print(__file__, e.tag, "not implemented")
+        print(utils.common.dbg(), e.tag, "not implemented")
 
 if __name__ == "__main__":
     tree = read_xml_tree_from_file("./tests/xml/test_title.mscx")

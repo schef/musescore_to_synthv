@@ -1,4 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from inspect import currentframe, getframeinfo
+import inspect
+
 
 class txt:
     CEND = '\033[0m'
@@ -36,4 +40,20 @@ class txt:
     CBEIGE2 = '\33[96m'
     CWHITE2 = '\33[97m'
 
-    TAB = '  '
+    CTAB = '  '
+
+def dbg():
+    file_name = inspect.stack()[1][1]
+    line_num = inspect.stack()[1][2]
+    func_name = inspect.stack()[1][3]
+    string = ""
+    string += "["
+    string += txt.CBOLD + txt.CYELLOW
+    string += file_name.split('/')[-1]
+    string += txt.CEND
+    string += ":"
+    string += txt.CBOLD + txt.CBLUE
+    string += str(line_num)
+    string += txt.CEND
+    string += "]"
+    return(string)

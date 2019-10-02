@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import utils.common
+
 #   <Tempo>
 #     <tempo>1.65</tempo>
 #     <followText>1</followText>
@@ -19,7 +21,7 @@ def handle_elements(element):
     if (element.tag == "tempo"):
         print(element.text)
     else:
-        print(__file__, element.tag, "not implemented")
+        print(utils.common.dbg(), element.tag, "not implemented")
 
 def parse(tempo):
     print(tempo.tag)
