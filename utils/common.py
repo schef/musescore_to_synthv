@@ -2,7 +2,7 @@
 
 from inspect import currentframe, getframeinfo
 import inspect
-
+import xml.etree.ElementTree as ET
 
 class txt:
     CEND = '\033[0m'
@@ -57,3 +57,27 @@ def dbg():
     string += txt.CEND
     string += "]"
     return(string)
+
+class XmlParser:
+    def read_xml_tree_from_file(file_name):
+        xml_tree = ET.parse(file_name)
+        return xml_tree
+
+    def write_xml_tree_to_file(xml_tree, file_name):
+        xml_tree.write(file_name)
+
+    def get_xml_root_from_xml_tree(xml_tree):
+        return xml_tree.getroot()
+
+    def get_child_by_tag(element, tag):
+        for child in list(element):
+            if child.tag == tag:
+                return child
+        return None
+    
+    def get_children_by_tag(element, tag):
+        children = []
+        for child in list(element):
+            if child.tag == tag:
+                children.append(child)
+        return children
