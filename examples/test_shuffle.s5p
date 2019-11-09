@@ -10,7 +10,7 @@
     "tempo": [
         {
             "position": 0,
-            "beatPerMinute": 80.0
+            "beatPerMinute": 120.0
         }
     ],
     "tracks": [
@@ -26,106 +26,61 @@
                     "duration": 705600000,
                     "lyric": "-",
                     "comment": "-",
-                    "pitch": 60,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 705600000,
-                    "duration": 352800000,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 62,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 1058400000,
-                    "duration": 352800000,
-                    "lyric": "-",
-                    "comment": "-",
                     "pitch": 64,
                     "dF0Vbr": 0.0,
                     "dF0Jitter": 0.0
                 },
                 {
-                    "onset": 1764000000,
-                    "duration": 352800000,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 67,
+                    "onset": 1176000000.0,
+                    "duration": 235200000.0,
+                    "lyric": "da",
+                    "comment": "da",
+                    "pitch": 64,
                     "dF0Vbr": 0.0,
                     "dF0Jitter": 0.0
                 },
                 {
-                    "onset": 2116800000,
-                    "duration": 352800000,
-                    "lyric": "-",
-                    "comment": "-",
+                    "onset": 1411200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "bi",
+                    "comment": "bi",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 1881600000.0,
+                    "duration": 235200000.0,
+                    "lyric": "la",
+                    "comment": "la",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 2116800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "bi",
+                    "comment": "bi",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 2587200000.0,
+                    "duration": 705600000.0,
+                    "lyric": "stvar",
+                    "comment": "stvar",
                     "pitch": 69,
                     "dF0Vbr": 0.0,
                     "dF0Jitter": 0.0
                 },
                 {
-                    "onset": 2822400000,
-                    "duration": 470400000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 72,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
                     "onset": 3292800000.0,
-                    "duration": 470400000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 74,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 3763200000.0,
-                    "duration": 470400000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 76,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 4233600000.0,
-                    "duration": 235200000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 77,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 4468800000.0,
-                    "duration": 235200000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 79,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 4704000000.0,
-                    "duration": 235200000.0,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 81,
-                    "dF0Vbr": 0.0,
-                    "dF0Jitter": 0.0
-                },
-                {
-                    "onset": 4939200000.0,
-                    "duration": 705600000,
-                    "lyric": "-",
-                    "comment": "-",
-                    "pitch": 72,
+                    "duration": 2822400000.0,
+                    "lyric": "na",
+                    "comment": "na",
+                    "pitch": 69,
                     "dF0Vbr": 0.0,
                     "dF0Jitter": 0.0
                 },

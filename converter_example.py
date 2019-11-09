@@ -25,6 +25,7 @@ tuplet = False
 output_string = ""
 use_hr_dict = False
 use_shuffle = False
+shuffled = False
 
 def get_time_signature_duration(n, d):
     # print("get_time_signature_duration")
@@ -197,6 +198,9 @@ def set_pitch(p, d):
     global tie
     global dot
     global use_shuffle
+    global shuffled
+
+    print("onset:", onset % ONE_BEAT)
 
     pitch = int(p)
     duration += duration_type[d]
@@ -207,16 +211,23 @@ def set_pitch(p, d):
         duration += int(duration_type[d] / 4)
     if (dot > 2):
         duration += int(duration_type[d] / 8)
-    dot = 0
 
     if (tuplet):
         duration = duration * 2 / 3
 
-    if (use_shuffle and d == 'eighth' and not tuplet):
-        if (onset % ONE_BEAT == 0):
-            duration = (duration * 2 / 3) * 2
+    if (use_shuffle and (d == 'eighth' or (d == "quarter" and dot)) and not tuplet):
+        if (shuffled):
+            print("shuffle weak:", duration / ONE_BEAT, end=" => ")
+            duration -= (duration_type['quarter'] / 3) * 2 -  duration_type['eighth']
+            print(duration / ONE_BEAT)
+            shuffled = False
         else:
-            duration = (duration * 2 / 3) * 1
+            print("shuffle strong:", duration / ONE_BEAT, end=" => ")
+            duration += (duration_type['quarter'] / 3) * 2 -  duration_type['eighth']
+            print(duration / ONE_BEAT)
+            shuffled = True
+
+    dot = 0
 
     if (tie):
         tie = False
@@ -233,6 +244,9 @@ def set_rest(d):
     global onset
     global dot
     global use_shuffle
+    global shuffled
+
+    print("onset:", onset % ONE_BEAT)
 
     duration = duration_type[d]
 
@@ -242,17 +256,23 @@ def set_rest(d):
         duration += int(duration_type[d] / 4)
     if (dot > 2):
         duration += int(duration_type[d] / 8)
-    dot = 0
 
     if (tuplet):
         duration = duration * 2 / 3
 
-    if (use_shuffle and d == 'eighth' and not tuplet):
-        if (onset % ONE_BEAT == 0):
-            duration = (duration * 2 / 3) * 2
+    if (use_shuffle and (d == 'eighth' or (d == "quarter" and dot)) and not tuplet):
+        if (shuffled):
+            print("shuffle weak:", duration / ONE_BEAT, end=" => ")
+            duration -= (duration_type['quarter'] / 3) * 2 -  duration_type['eighth']
+            print(duration / ONE_BEAT)
+            shuffled = False
         else:
-            duration = (duration * 2 / 3) * 1
+            print("shuffle strong:", duration / ONE_BEAT, end=" => ")
+            duration += (duration_type['quarter'] / 3) * 2 -  duration_type['eighth']
+            print(duration / ONE_BEAT)
+            shuffled = True
 
+    dot = 0
     onset += duration
 
 def set_lyric(l):
