@@ -50,6 +50,7 @@ def generate_lyric(l):
     if (l in ["-", "", '', None]):
         return "-"
     global use_hr_dict
+    l.replace('ije', 'je')
     if (use_hr_dict):
         string = "."
         for letter in l:
