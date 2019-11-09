@@ -12,6 +12,7 @@ set_lyric_cb = None
 set_tie_cb = None
 set_dot_cb = None
 set_tuplet_cb = None
+set_tempo_cb = None
 
 SET_TAB = txt.TAB * 30
 
@@ -91,6 +92,12 @@ def parse_rest(v):
         if (r.tag == "durationType"):
             set_rest(r.text)
 
+def parse_tempo(v):
+    for r in v.findall("./"):
+        print(txt.TAB * 4, txt.CBEIGE + r.tag + txt.CEND, [r.attrib, r.tail.strip(), str(r.text).strip()])
+        if (r.tag == "tempo"):
+            set_tempo(r.text)
+
 def parse_root(r):
     for s in r.findall("./Score/Staff"):
         print(txt.CBLUE + s.tag + txt.CEND, [s.attrib, s.tail.strip(), str(s.text).strip()])
@@ -117,6 +124,8 @@ def parse_root(r):
                                 set_tuplet(True)
                             elif (v.tag == "endTuplet"):
                                 set_tuplet(False)
+                            elif (v.tag == "Tempo"):
+                                parse_tempo(v)
 
         global set_staff_end_cb
         if (set_staff_end_cb):
@@ -128,9 +137,15 @@ def set_tuplet(status):
     global set_tuplet_cb
     if set_tuplet_cb:
         set_tuplet_cb(status)
+    
+def set_tempo(tempo):
+    print(SET_TAB + txt.CRED + "set_tempo" + txt.CEND, tempo)
+    global set_tempo_cb
+    if set_tempo_cb:
+        set_tempo_cb(tempo)
 
 def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, set_time_signature_func = None,
-                set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None, set_tuplet_func = False):
+                set_pitch_func = None, set_rest_func = None, set_lyric_func = None, set_tie_func = None, set_dot_func = None, set_tuplet_func = False, set_tempo_func = False):
     if (set_staff_start_func):
         global set_staff_start_cb
         set_staff_start_cb = set_staff_start_func
@@ -158,6 +173,9 @@ def parse_xml(xml_file, set_staff_start_func = None, set_staff_end_func = None, 
     if (set_tuplet_func):
         global set_tuplet_cb
         set_tuplet_cb = set_tuplet_func
+    if (set_tempo_func):
+        global set_tempo_cb
+        set_tempo_cb = set_tempo_func
 
     tree = ET.parse(xml_file)
     root = tree.getroot()

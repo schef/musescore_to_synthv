@@ -24,6 +24,7 @@ tuplet = False
 
 output_string = ""
 use_hr_dict = False
+use_shuffle = False
 
 def get_time_signature_duration(n, d):
     # print("get_time_signature_duration")
@@ -195,6 +196,7 @@ def set_pitch(p, d):
     global lyric
     global tie
     global dot
+    global use_shuffle
 
     pitch = int(p)
     duration += duration_type[d]
@@ -210,6 +212,12 @@ def set_pitch(p, d):
     if (tuplet):
         duration = duration * 2 / 3
 
+    if (use_shuffle and d == 'eighth' and not tuplet):
+        if (onset % ONE_BEAT == 0):
+            duration = (duration * 2 / 3) * 2
+        else:
+            duration = (duration * 2 / 3) * 1
+
     if (tie):
         tie = False
     else:
@@ -224,6 +232,7 @@ def set_pitch(p, d):
 def set_rest(d):
     global onset
     global dot
+    global use_shuffle
 
     duration = duration_type[d]
 
@@ -237,6 +246,12 @@ def set_rest(d):
 
     if (tuplet):
         duration = duration * 2 / 3
+
+    if (use_shuffle and d == 'eighth' and not tuplet):
+        if (onset % ONE_BEAT == 0):
+            duration = (duration * 2 / 3) * 2
+        else:
+            duration = (duration * 2 / 3) * 1
 
     onset += duration
 
@@ -269,10 +284,13 @@ def write_to_file(file_name, data):
 @click.argument('readfile', type=click.Path(exists=True))
 @click.argument('writefile', type=click.Path(exists=False))
 @click.option('-d', "--dict", is_flag=True)
-def main(readfile, writefile, dict):
+@click.option('-s', "--shuffle", is_flag=True)
+def main(readfile, writefile, dict, shuffle):
     global output_string
     global use_hr_dict
+    global use_shuffle
     use_hr_dict = dict
+    use_shuggle = shuffle
     output_string += generate_project_start()
     MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot, set_tuplet)
     output_string += generate_staff_end()
