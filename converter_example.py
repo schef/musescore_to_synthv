@@ -73,7 +73,7 @@ def generate_project_start():
     string += '    "tempo": [' + '\n'
     string += '        {' + '\n'
     string += '            "position": 0,' + '\n'
-    string += '            "beatPerMinute": 90.0' + '\n'
+    string += '            "beatPerMinute": 120.0' + '\n'
     string += '        }' + '\n'
     string += '    ],' + '\n'
     string += '    "tracks": [' + '\n'
@@ -276,6 +276,11 @@ def set_tuplet(status):
     else:
         tuplet = False
 
+def set_tempo(tempo):
+    global output_string
+    bpm = float(round(120 * float(tempo) / 2))
+    output_string = output_string.replace('"beatPerMinute": 120.0', '"beatPerMinute": ' + str(bpm), 1)
+
 def write_to_file(file_name, data):
     with open(file_name, "w") as write_file:
         write_file.write(data)
@@ -290,9 +295,9 @@ def main(readfile, writefile, dict, shuffle):
     global use_hr_dict
     global use_shuffle
     use_hr_dict = dict
-    use_shuggle = shuffle
+    use_shuffle = shuffle
     output_string += generate_project_start()
-    MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot, set_tuplet)
+    MP.parse_xml(click.format_filename(readfile), set_staff_start, set_staff_end, set_time_signature, set_pitch, set_rest, set_lyric, set_tie, set_dot, set_tuplet, set_tempo)
     output_string += generate_staff_end()
     output_string += generate_project_end()
     write_to_file(click.format_filename(writefile), output_string)
