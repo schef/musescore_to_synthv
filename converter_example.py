@@ -54,7 +54,10 @@ def generate_lyric(l):
         string = "."
         for letter in l:
             try:
-                string += jp_to_hr.jp_to_hr[letter.lower()] + " "
+                if (l[-1] == 'r' and letter == 'r'):
+                    string += 'er' + " "
+                else:
+                    string += jp_to_hr.jp_to_hr[letter.lower()] + " "
             except KeyError:
                 pass
         return string[:-1]
