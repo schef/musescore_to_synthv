@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ApplicationSettings>
+  <Editor playbackResumeMode="1"/>
+  <Audio midiDevice="14-0"/>
+  <General onboardingGettingStarted="1" telemetryConsent="accepted" telemetryConsentRetakeFeedback="accepted"
+           onboardingRetakeFeedback="1" onboardingRecenterView="1"/>
+  <LiveRender/>
+  <UILayout windowState="2 37 1916 1041">
+    <SidePanels>
+      <VoicePanel preferredAttachment="ModeBRAttached" viewPosition="0">
+        <StackingLayoutContainer>
+          <Vocal-Mode collapsed="0"/>
+          <Language collapsed="0"/>
+          <Parameters collapsed="0"/>
+          <Tuning collapsed="0"/>
+          <Synthesis-Engine collapsed="0"/>
+          <Defaults-Sing-Mode collapsed="0"/>
+          <Defaults-Manual-Mode collapsed="0"/>
+        </StackingLayoutContainer>
+      </VoicePanel>
+      <LicensePanel preferredAttachment="ModeBRAttached" viewPosition="0">
+        <StackingLayoutContainer>
+          <Status collapsed="0"/>
+          <Installed-Products collapsed="0"/>
+        </StackingLayoutContainer>
+      </LicensePanel>
+      <AIRetakesPanel preferredAttachment="ModeBRAttached" viewPosition="0">
+        <StackingLayoutContainer>
+          <_selection collapsed="0"/>
+          <_top collapsed="0" tabIndex="0"/>
+          <_takes collapsed="0"/>
+        </StackingLayoutContainer>
+      </AIRetakesPanel>
+      <NotePropertiesPanel preferredAttachment="ModeBRAttached" viewPosition="0">
+        <StackingLayoutContainer>
+          <Pitch collapsed="0"/>
+          <Timing-and-Phonemes collapsed="0"/>
+          <Navigation collapsed="1"/>
+          <Language collapsed="0"/>
+          <Expression-Group collapsed="0"/>
+        </StackingLayoutContainer>
+      </NotePropertiesPanel>
+      <RenderPanel preferredAttachment="ModeBRAttached" viewPosition="0">
+        <StackingLayoutContainer>
+          <Tracks collapsed="0"/>
+          <Format collapsed="0"/>
+        </StackingLayoutContainer>
+      </RenderPanel>
+    </SidePanels>
+    <UIModel contentLength="993" attachmentMode="ModeBRAttached" statusBarShown="1">
+      <BlickBasedEditor contentLength="484" collapsed="0" attachmentMode="ModeBRAttached"
+                        snapping="8">
+        <ParameterPanel contentLength="100" collapsed="1" attachmentMode="ModeBRAttached"
+                        editType="pitchDelta" viewType="loudness" magnification="1" editingMode="ModeMultiEdit"/>
+        <PianoRoll showMelodyOutline="1" showBasePitchCurve="1" showRenderedPitchCurve="1"
+                   showWaveform="1" showPhonemes="0" showRetakes="1" modeDirectPitchEditing="0"
+                   modeFreehand="0" linkEditingAndPitchModes="0"/>
+      </BlickBasedEditor>
+      <ArrangementView contentLength="457" collapsed="0" attachmentMode="ModeBRAttached"
+                       snapping="4"/>
+      <SidePanelContainerModel attachmentMode="ModeBRAttached">
+        <SidePanelLaunchBar contentLength="48" collapsed="0" attachmentMode="ModeBRAttached"/>
+        <RenderPanel contentLength="220" collapsed="0" attachmentMode="ModeBRAttached"/>
+      </SidePanelContainerModel>
+    </UIModel>
+  </UILayout>
+  <Keyboard keyMapping="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&#13;&#10;&lt;KEYMAPPINGS basedOnDefaults=&quot;1&quot;/&gt;&#13;&#10;"/>
+  <RecentlyOpenedFiles>
+    <FileItem path="/home/schef/git/musescore_to_synthv/examples/walk_on_by_synthv.svp"/>
+    <FileItem path="/home/schef/git/musescore_to_synthv/examples/walk_on_by_synthv.s5p"/>
+    <FileItem path="/home/schef/Bitwig Studio/Projects/tenderly/tenderly.svp"/>
+    <FileItem path="/home/schef/test.svp"/>
+  </RecentlyOpenedFiles>
+  <DNNI/>
+</ApplicationSettings>

@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 import click
+import json
 import re
+import uuid
 import musescore_parser as MP
 import jp_to_hr
 
@@ -21,9 +23,14 @@ dot = 0
 staff_num = 0
 tuplet = False
 
-output_string = ""
 use_hr_dict = False
 tempo_events = []
+shuffle_percent = 0.0
+shuffle_unit = 8
+current_notes = []
+tracks_data = []
+staff_names = {}
+current_staff_id = None
 
 
 def get_time_signature_duration(n, d):
@@ -60,6 +67,21 @@ def generate_lyric(l):
                 pass
         return string[:-1]
     return re.sub(r"\W+", "", l)
+
+
+def generate_phonemes(l):
+    if l in ["-", "", "", None]:
+        return "-"
+    global use_hr_dict
+    if use_hr_dict:
+        string = ""
+        for letter in l:
+            try:
+                string += jp_to_hr.jp_to_hr[letter.lower()] + " "
+            except KeyError:
+                pass
+        return string.strip()
+    return re.sub(r"\W+", " ", l).strip()
 
 
 def format_bpm(bpm):
@@ -112,98 +134,216 @@ def generate_staff_start():
     return string
 
 
-def generate_note():
-    string = ""
-    string += "                {" + "\n"
-    string += '                    "onset": ' + str(onset) + "," + "\n"
-    string += '                    "duration": ' + str(duration) + "," + "\n"
-    string += '                    "lyric": "' + generate_lyric(lyric) + '",' + "\n"
-    string += '                    "comment": "' + str(lyric) + '",' + "\n"
-    string += '                    "pitch": ' + str(pitch) + "," + "\n"
-    string += '                    "dF0Vbr": 0.0' + "," + "\n"
-    string += '                    "dF0Jitter": 0.0' + "" + "\n"
-    string += "                }," + "\n"
-    return string
+def build_note_data(onset_value, duration_value, lyric_value, pitch_value):
+    phonemes = generate_phonemes(lyric_value)
+    return {
+        "musicalType": "singing",
+        "onset": onset_value,
+        "duration": duration_value,
+        "lyrics": "-" if lyric_value in [None, ""] else lyric_value,
+        "phonemes": phonemes,
+        "accent": "",
+        "pitch": pitch_value,
+        "detune": 0,
+        "instantMode": False,
+        "attributes": {
+            "dF0Vbr": 0.0,
+            "dF0Jitter": 0.0,
+            "evenSyllableDuration": False,
+        },
+        "systemAttributes": {
+            "evenSyllableDuration": True,
+        },
+        "pitchTakes": {
+            "activeTakeId": 0,
+            "takes": [
+                {
+                    "id": 0,
+                    "expr": 0.0,
+                    "liked": False,
+                }
+            ],
+        },
+        "timbreTakes": {
+            "activeTakeId": 0,
+            "takes": [
+                {
+                    "id": 0,
+                    "expr": 0.0,
+                    "liked": False,
+                }
+            ],
+        },
+    }
 
 
-def generate_staff_end():
-    string = ""
-    string += "            ]," + "\n"
-    string += '            "gsEvents": null,' + "\n"
-    string += '            "mixer": {' + "\n"
-    string += '                "gainDecibel": 0.0,' + "\n"
-    string += '                "pan": 0.0,' + "\n"
-    string += '                "muted": false,' + "\n"
-    string += '                "solo": false,' + "\n"
-    string += '                "engineOn": true,' + "\n"
-    string += '                "display": true' + "\n"
-    string += "            }," + "\n"
-    string += '            "parameters": {' + "\n"
-    string += '                "interval": 5512500,' + "\n"
-    string += '                "pitchDelta": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "vibratoEnv": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "loudness": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "tension": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "breathiness": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "voicing": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]," + "\n"
-    string += '                "gender": [' + "\n"
-    string += "                    0," + "\n"
-    string += "                    0" + "\n"
-    string += "                ]" + "\n"
-    string += "            }" + "\n"
-    string += "        }," + "\n"
-    return string
+def get_shuffle_offset(onset_value):
+    if shuffle_percent <= 0.0:
+        return 0
+    onset_int = int(round(onset_value))
+    if abs(onset_value - onset_int) > 0.0001:
+        return 0
+    if shuffle_unit == 16:
+        subdivision = int(ONE_BEAT / 4)
+    else:
+        subdivision = int(ONE_BEAT / 2)
+    if subdivision <= 0:
+        return 0
+    if onset_int % subdivision != 0:
+        return 0
+    if (onset_int // subdivision) % 2 != 1:
+        return 0
+    return int(subdivision * shuffle_percent / 100.0)
 
 
-def generate_project_end():
-    string = ""
-    string += "    ]," + "\n"
-    string += '    "instrumental": {' + "\n"
-    string += '        "filename": "",' + "\n"
-    string += '        "offset": 0.0' + "\n"
-    string += "    }," + "\n"
-    string += '    "mixer": {' + "\n"
-    string += '        "gainInstrumentalDecibel": 0.0,' + "\n"
-    string += '        "gainVocalMasterDecibel": 0.0,' + "\n"
-    string += '        "instrumentalMuted": false,' + "\n"
-    string += '        "vocalMasterMuted": false' + "\n"
-    string += "    }" + "\n"
-    string += "}" + "\n"
-    return string
+def build_default_parameters():
+    return {
+        "pitchDelta": {"mode": "linear", "points": [0, 0.0]},
+        "vibratoEnv": {"mode": "linear", "points": [0, 1.0]},
+        "loudness": {"mode": "linear", "points": [0, 0.0]},
+        "tension": {"mode": "linear", "points": [0, 0.0]},
+        "breathiness": {"mode": "linear", "points": [0, 0.0]},
+        "voicing": {"mode": "linear", "points": [0, 1.0]},
+        "gender": {"mode": "linear", "points": [0, 0.0]},
+        "toneShift": {"mode": "cubic", "points": []},
+    }
 
 
-def set_staff_start():
+def build_main_ref():
+    return {
+        "groupID": str(uuid.uuid4()),
+        "blickAbsoluteBegin": 0,
+        "blickAbsoluteEnd": -1,
+        "blickOffset": 0,
+        "pitchOffset": 0,
+        "isInstrumental": False,
+        "systemPitchDelta": {"mode": "cubic", "points": []},
+        "database": {
+            "name": "Mo Chen",
+            "language": "mandarin",
+            "phoneset": "xsampa",
+            "languageOverride": "english",
+            "phonesetOverride": "arpabet",
+            "backendType": "SVR2AI",
+            "version": "109",
+        },
+        "dictionary": "",
+        "voice": {
+            "vocalModeInherited": True,
+            "vocalModePreset": "",
+            "vocalModeParams": {},
+        },
+        "pitchTakes": {
+            "activeTakeId": 0,
+            "takes": [
+                {
+                    "id": 0,
+                    "expr": 0.0,
+                    "liked": False,
+                }
+            ],
+        },
+        "timbreTakes": {
+            "activeTakeId": 0,
+            "takes": [
+                {
+                    "id": 0,
+                    "expr": 0.0,
+                    "liked": False,
+                }
+            ],
+        },
+    }
+
+
+def build_track_data(notes, display_order, track_name):
+    return {
+        "name": track_name,
+        "dispColor": "ff15e879",
+        "dispOrder": display_order,
+        "renderEnabled": False,
+        "mixer": {
+            "gainDecibel": 0.0,
+            "pan": 0.0,
+            "mute": False,
+            "solo": False,
+            "display": True,
+        },
+        "mainGroup": {
+            "name": "main",
+            "uuid": "main",
+            "parameters": build_default_parameters(),
+            "vocalModes": {},
+            "notes": notes,
+        },
+        "mainRef": build_main_ref(),
+        "groups": [],
+    }
+
+
+def build_project_data(tracks):
+    numerator = time_signature_n or 4
+    denominator = time_signature_d or 4
+    tempo_output = tempo_events[:]
+    if not tempo_output:
+        tempo_output = [(0, 90.0)]
+    elif tempo_output[0][0] != 0:
+        tempo_output = [(0, tempo_output[0][1])] + tempo_output
+    tempo_output = sorted(tempo_output, key=lambda item: item[0])
+    return {
+        "version": 153,
+        "time": {
+            "meter": [
+                {
+                    "index": 0,
+                    "numerator": numerator,
+                    "denominator": denominator,
+                }
+            ],
+            "tempo": [
+                {"position": position, "bpm": bpm} for position, bpm in tempo_output
+            ],
+        },
+        "library": [],
+        "tracks": tracks,
+        "renderConfig": {
+            "destination": "",
+            "filename": "untitled",
+            "numChannels": 1,
+            "aspirationFormat": "noAspiration",
+            "bitDepth": 16,
+            "sampleRate": 44100,
+            "exportMixDown": True,
+            "exportPitch": False,
+        },
+    }
+
+
+def set_staff_start(staff_id):
     global onset
+    global current_notes
+    global current_staff_id
     onset = 0
     # print(generate_staff_start())
-    global output_string
-    output_string += generate_staff_start()
+    current_notes = []
+    current_staff_id = staff_id
 
 
 def set_staff_end():
     # print(generate_staff_end())
-    global output_string
-    output_string += generate_staff_end()
+    global tracks_data
     global staff_num
+    name = staff_names.get(current_staff_id, "Unnamed Track")
+    tracks_data.append(build_track_data(current_notes, staff_num, name))
     staff_num += 1
+
+
+def set_staff_name(staff_id, name):
+    if not staff_id:
+        return
+    if not name:
+        return
+    staff_names[staff_id] = name
 
 
 def set_time_signature(n, d):
@@ -225,6 +365,7 @@ def set_pitch(p, d):
     global lyric
     global tie
     global dot
+    global current_notes
 
     pitch = int(p)
     duration += duration_type[d]
@@ -246,7 +387,19 @@ def set_pitch(p, d):
         if lyric == "":
             lyric = "-"
         # print(generate_note())
-        output_string += generate_note()
+        shuffle_offset = get_shuffle_offset(onset)
+        output_onset = onset
+        output_duration = duration
+        if shuffle_offset > 0:
+            output_onset = onset + shuffle_offset
+            output_duration = max(0, duration - shuffle_offset)
+            if current_notes:
+                last_note = current_notes[-1]
+                if last_note["onset"] + last_note["duration"] == onset:
+                    last_note["duration"] += shuffle_offset
+        current_notes.append(
+            build_note_data(output_onset, output_duration, lyric, pitch)
+        )
         onset += duration
         duration = 0
         lyric = ""
@@ -317,14 +470,42 @@ def write_to_file(file_name, data):
 @click.argument("readfile", type=click.Path(exists=True))
 @click.argument("writefile", type=click.Path(exists=False))
 @click.option("-d", "--dict", is_flag=True)
-def main(readfile, writefile, dict):
-    global output_string
+@click.option("-s", "--shuffle", type=float, default=0.0)
+@click.option(
+    "-u",
+    "--shuffle-unit",
+    "shuffle_unit_option",
+    type=click.Choice(["8", "16"]),
+    default="8",
+)
+@click.option("-v", "--verbose", is_flag=True)
+def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
     global use_hr_dict
+    global shuffle_percent
+    global shuffle_unit
+    global tracks_data
+    global tempo_events
+    global staff_num
+    global time_signature_n
+    global time_signature_d
+    global staff_names
+    global current_staff_id
     use_hr_dict = dict
+    shuffle_percent = max(0.0, min(100.0, float(shuffle)))
+    shuffle_unit = int(shuffle_unit_option)
+    MP.DEBUG = verbose
+    tracks_data = []
+    tempo_events = []
+    staff_num = 0
+    time_signature_n = 0
+    time_signature_d = 0
+    staff_names = {}
+    current_staff_id = None
     MP.parse_xml(
         click.format_filename(readfile),
         set_staff_start,
         set_staff_end,
+        set_staff_name,
         set_time_signature,
         set_pitch,
         set_rest,
@@ -334,11 +515,9 @@ def main(readfile, writefile, dict):
         set_tempo,
         set_tuplet,
     )
-    output_string += generate_staff_end()
-    final_output = generate_project_start(tempo_events)
-    final_output += output_string
-    final_output += generate_project_end()
-    write_to_file(click.format_filename(writefile), final_output)
+    project = build_project_data(tracks_data)
+    json_output = json.dumps(project, ensure_ascii=True)
+    write_to_file(click.format_filename(writefile), json_output)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,4118 @@
+{
+    "version": 7,
+    "meter": [
+        {
+            "measure": 0,
+            "beatPerMeasure": 4,
+            "beatGranularity": 4
+        }
+    ],
+    "tempo": [
+        {
+            "position": 0,
+            "beatPerMinute": 90.0
+        }
+    ],
+    "tracks": [
+        {
+            "name": "Unnamed Track",
+            "dbName": "Eleanor Forte",
+            "color": "15e879",
+            "displayOrder": 0,
+            "dbDefaults": {},
+            "notes": [
+                {
+                    "onset": 2822400000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4586400000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4939200000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 5292000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7408800000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7761600000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 8114400000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10231200000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10584000000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10936800000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 11642400000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 13759200000,
+                    "duration": 352800000,
+                    "lyric": "It",
+                    "comment": "It",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 14112000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 15876000000,
+                    "duration": 352800000,
+                    "lyric": "ed",
+                    "comment": "ed",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16228800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16581600000,
+                    "duration": 1411200000,
+                    "lyric": "mo",
+                    "comment": "mo",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 17992800000,
+                    "duration": 705600000,
+                    "lyric": "ment",
+                    "comment": "ment",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 18698400000,
+                    "duration": 705600000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 19404000000,
+                    "duration": 3175200000,
+                    "lyric": "go",
+                    "comment": "go",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 25401600000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27165600000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27518400000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27871200000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 29988000000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30340800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30693600000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 32810400000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33163200000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33516000000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 34221600000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 35985600000,
+                    "duration": 352800000,
+                    "lyric": "I",
+                    "comment": "I",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 36338400000,
+                    "duration": 2116800000,
+                    "lyric": "know",
+                    "comment": "know",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38455200000,
+                    "duration": 352800000,
+                    "lyric": "for",
+                    "comment": "for",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38808000000,
+                    "duration": 352800000,
+                    "lyric": "your",
+                    "comment": "your",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 39160800000,
+                    "duration": 1764000000,
+                    "lyric": "eyes",
+                    "comment": "eyes",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41277600000,
+                    "duration": 705600000,
+                    "lyric": "tell",
+                    "comment": "tell",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41983200000,
+                    "duration": 352800000,
+                    "lyric": "me",
+                    "comment": "me",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 42336000000,
+                    "duration": 2822400000,
+                    "lyric": "so",
+                    "comment": "so",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 45158400000,
+                    "duration": 2822400000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 47980800000,
+                    "duration": 2116800000,
+                    "lyric": "We",
+                    "comment": "We",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50097600000,
+                    "duration": 352800000,
+                    "lyric": "were",
+                    "comment": "were",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50450400000,
+                    "duration": 705600000,
+                    "lyric": "al",
+                    "comment": "al",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 51156000000,
+                    "duration": 1764000000,
+                    "lyric": "ways",
+                    "comment": "ways",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 52920000000,
+                    "duration": 705600000,
+                    "lyric": "Like",
+                    "comment": "Like",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 53625600000,
+                    "duration": 1058400000,
+                    "lyric": "sis",
+                    "comment": "sis",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 54684000000,
+                    "duration": 1058400000,
+                    "lyric": "ter",
+                    "comment": "ter",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 55742400000,
+                    "duration": 705600000,
+                    "lyric": "and",
+                    "comment": "and",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56448000000,
+                    "duration": 352800000,
+                    "lyric": "bro",
+                    "comment": "bro",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56800800000,
+                    "duration": 1764000000,
+                    "lyric": "ther",
+                    "comment": "ther",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 58564800000,
+                    "duration": 705600000,
+                    "lyric": "Un",
+                    "comment": "Un",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 59270400000,
+                    "duration": 2116800000,
+                    "lyric": "til",
+                    "comment": "til",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61387200000,
+                    "duration": 352800000,
+                    "lyric": "to",
+                    "comment": "to",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61740000000,
+                    "duration": 1764000000,
+                    "lyric": "night",
+                    "comment": "night",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 63856800000,
+                    "duration": 705600000,
+                    "lyric": "When",
+                    "comment": "When",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64562400000,
+                    "duration": 352800000,
+                    "lyric": "we",
+                    "comment": "we",
+                    "pitch": 69,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64915200000,
+                    "duration": 1411200000.0,
+                    "lyric": "looked",
+                    "comment": "looked",
+                    "pitch": 67,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66326400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "at",
+                    "comment": "at",
+                    "pitch": 67,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66796800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "each",
+                    "comment": "each",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67267200000.0,
+                    "duration": 352800000,
+                    "lyric": "oth",
+                    "comment": "oth",
+                    "pitch": 67,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67620000000.0,
+                    "duration": 2469600000,
+                    "lyric": "er",
+                    "comment": "er",
+                    "pitch": 68,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 70089600000.0,
+                    "duration": 352800000,
+                    "lyric": "That",
+                    "comment": "That",
+                    "pitch": 69,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 71853600000.0,
+                    "duration": 352800000,
+                    "lyric": "was",
+                    "comment": "was",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72206400000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72559200000.0,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 74676000000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75028800000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75381600000.0,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77498400000.0,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77851200000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78204000000.0,
+                    "duration": 1411200000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 79615200000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 80673600000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81379200000.0,
+                    "duration": 352800000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81732000000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 67,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82437600000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83143200000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83848800000.0,
+                    "duration": 705600000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 84554400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85024800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85495200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85965600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 67,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86436000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86906400000.0,
+                    "duration": 5644800000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 96079200000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97137600000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97490400000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97843200000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 101724000000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102076800000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102429600000.0,
+                    "duration": 529200000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102958800000.0,
+                    "duration": 529200000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103488000000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103840800000.0,
+                    "duration": 1058400000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 104899200000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 105957600000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 106663200000.0,
+                    "duration": 2822400000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 66,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 109956000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110426400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110896800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 66,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111367200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 68,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111837600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 65,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112308000000.0,
+                    "duration": 3175200000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 66,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 118658400000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 119716800000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120069600000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120422400000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "name": "Unnamed Track",
+            "dbName": "Eleanor Forte",
+            "color": "15e879",
+            "displayOrder": 1,
+            "dbDefaults": {},
+            "notes": [
+                {
+                    "onset": 2822400000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4586400000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4939200000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 5292000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7408800000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7761600000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 8114400000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10231200000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10584000000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10936800000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 11642400000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 13759200000,
+                    "duration": 352800000,
+                    "lyric": "It",
+                    "comment": "It",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 14112000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 15876000000,
+                    "duration": 352800000,
+                    "lyric": "ed",
+                    "comment": "ed",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16228800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16581600000,
+                    "duration": 1411200000,
+                    "lyric": "mo",
+                    "comment": "mo",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 17992800000,
+                    "duration": 705600000,
+                    "lyric": "ment",
+                    "comment": "ment",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 18698400000,
+                    "duration": 705600000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 19404000000,
+                    "duration": 3175200000,
+                    "lyric": "go",
+                    "comment": "go",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 25401600000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27165600000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27518400000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27871200000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 29988000000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30340800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30693600000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 32810400000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33163200000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33516000000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 34221600000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 35985600000,
+                    "duration": 352800000,
+                    "lyric": "I",
+                    "comment": "I",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 36338400000,
+                    "duration": 2116800000,
+                    "lyric": "know",
+                    "comment": "know",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38455200000,
+                    "duration": 352800000,
+                    "lyric": "for",
+                    "comment": "for",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38808000000,
+                    "duration": 352800000,
+                    "lyric": "your",
+                    "comment": "your",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 39160800000,
+                    "duration": 1764000000,
+                    "lyric": "eyes",
+                    "comment": "eyes",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41277600000,
+                    "duration": 705600000,
+                    "lyric": "tell",
+                    "comment": "tell",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41983200000,
+                    "duration": 352800000,
+                    "lyric": "me",
+                    "comment": "me",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 42336000000,
+                    "duration": 2822400000,
+                    "lyric": "so",
+                    "comment": "so",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 45158400000,
+                    "duration": 2822400000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 47980800000,
+                    "duration": 2116800000,
+                    "lyric": "We",
+                    "comment": "We",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50097600000,
+                    "duration": 352800000,
+                    "lyric": "were",
+                    "comment": "were",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50450400000,
+                    "duration": 705600000,
+                    "lyric": "al",
+                    "comment": "al",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 51156000000,
+                    "duration": 1764000000,
+                    "lyric": "ways",
+                    "comment": "ways",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 52920000000,
+                    "duration": 705600000,
+                    "lyric": "Like",
+                    "comment": "Like",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 53625600000,
+                    "duration": 1058400000,
+                    "lyric": "sis",
+                    "comment": "sis",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 54684000000,
+                    "duration": 1058400000,
+                    "lyric": "ter",
+                    "comment": "ter",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 55742400000,
+                    "duration": 705600000,
+                    "lyric": "and",
+                    "comment": "and",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56448000000,
+                    "duration": 352800000,
+                    "lyric": "bro",
+                    "comment": "bro",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56800800000,
+                    "duration": 1764000000,
+                    "lyric": "ther",
+                    "comment": "ther",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 58564800000,
+                    "duration": 705600000,
+                    "lyric": "Un",
+                    "comment": "Un",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 59270400000,
+                    "duration": 2116800000,
+                    "lyric": "til",
+                    "comment": "til",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61387200000,
+                    "duration": 352800000,
+                    "lyric": "to",
+                    "comment": "to",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61740000000,
+                    "duration": 1764000000,
+                    "lyric": "night",
+                    "comment": "night",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 63856800000,
+                    "duration": 705600000,
+                    "lyric": "When",
+                    "comment": "When",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64562400000,
+                    "duration": 352800000,
+                    "lyric": "we",
+                    "comment": "we",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64915200000,
+                    "duration": 1411200000.0,
+                    "lyric": "looked",
+                    "comment": "looked",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66326400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "at",
+                    "comment": "at",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66796800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "each",
+                    "comment": "each",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67267200000.0,
+                    "duration": 352800000,
+                    "lyric": "oth",
+                    "comment": "oth",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67620000000.0,
+                    "duration": 2469600000,
+                    "lyric": "er",
+                    "comment": "er",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 70089600000.0,
+                    "duration": 352800000,
+                    "lyric": "That",
+                    "comment": "That",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 71853600000.0,
+                    "duration": 352800000,
+                    "lyric": "was",
+                    "comment": "was",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72206400000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72559200000.0,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 74676000000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75028800000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75381600000.0,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77498400000.0,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77851200000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78204000000.0,
+                    "duration": 1411200000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 79615200000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 80673600000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81379200000.0,
+                    "duration": 352800000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81732000000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 64,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82437600000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83143200000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83848800000.0,
+                    "duration": 705600000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 84554400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85024800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85495200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85965600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86436000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86906400000.0,
+                    "duration": 5644800000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 96079200000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97137600000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97490400000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97843200000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 101724000000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102076800000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102429600000.0,
+                    "duration": 529200000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102958800000.0,
+                    "duration": 529200000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103488000000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103840800000.0,
+                    "duration": 1058400000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 104899200000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 105957600000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 106663200000.0,
+                    "duration": 2822400000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 109956000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110426400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110896800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111367200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 63,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111837600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 62,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112308000000.0,
+                    "duration": 3175200000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 61,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 118658400000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 119716800000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120069600000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120422400000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "name": "Unnamed Track",
+            "dbName": "Eleanor Forte",
+            "color": "15e879",
+            "displayOrder": 2,
+            "dbDefaults": {},
+            "notes": [
+                {
+                    "onset": 2822400000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4586400000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4939200000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 5292000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7408800000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7761600000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 8114400000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10231200000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10584000000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10936800000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 11642400000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 13759200000,
+                    "duration": 352800000,
+                    "lyric": "It",
+                    "comment": "It",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 14112000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 15876000000,
+                    "duration": 352800000,
+                    "lyric": "ed",
+                    "comment": "ed",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16228800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16581600000,
+                    "duration": 1411200000,
+                    "lyric": "mo",
+                    "comment": "mo",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 17992800000,
+                    "duration": 705600000,
+                    "lyric": "ment",
+                    "comment": "ment",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 18698400000,
+                    "duration": 705600000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 19404000000,
+                    "duration": 3175200000,
+                    "lyric": "go",
+                    "comment": "go",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 25401600000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27165600000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27518400000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27871200000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 29988000000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30340800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30693600000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 32810400000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33163200000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33516000000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 34221600000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 35985600000,
+                    "duration": 352800000,
+                    "lyric": "I",
+                    "comment": "I",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 36338400000,
+                    "duration": 2116800000,
+                    "lyric": "know",
+                    "comment": "know",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38455200000,
+                    "duration": 352800000,
+                    "lyric": "for",
+                    "comment": "for",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38808000000,
+                    "duration": 352800000,
+                    "lyric": "your",
+                    "comment": "your",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 39160800000,
+                    "duration": 1764000000,
+                    "lyric": "eyes",
+                    "comment": "eyes",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41277600000,
+                    "duration": 705600000,
+                    "lyric": "tell",
+                    "comment": "tell",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41983200000,
+                    "duration": 352800000,
+                    "lyric": "me",
+                    "comment": "me",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 42336000000,
+                    "duration": 2822400000,
+                    "lyric": "so",
+                    "comment": "so",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 45158400000,
+                    "duration": 1411200000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 46569600000,
+                    "duration": 1411200000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 47980800000,
+                    "duration": 2116800000,
+                    "lyric": "We",
+                    "comment": "We",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50097600000,
+                    "duration": 352800000,
+                    "lyric": "were",
+                    "comment": "were",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50450400000,
+                    "duration": 705600000,
+                    "lyric": "al",
+                    "comment": "al",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 51156000000,
+                    "duration": 1764000000,
+                    "lyric": "ways",
+                    "comment": "ways",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 52920000000,
+                    "duration": 705600000,
+                    "lyric": "Like",
+                    "comment": "Like",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 53625600000,
+                    "duration": 1058400000,
+                    "lyric": "sis",
+                    "comment": "sis",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 54684000000,
+                    "duration": 1058400000,
+                    "lyric": "ter",
+                    "comment": "ter",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 55742400000,
+                    "duration": 705600000,
+                    "lyric": "and",
+                    "comment": "and",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56448000000,
+                    "duration": 352800000,
+                    "lyric": "bro",
+                    "comment": "bro",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56800800000,
+                    "duration": 1764000000,
+                    "lyric": "ther",
+                    "comment": "ther",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 58564800000,
+                    "duration": 705600000,
+                    "lyric": "Un",
+                    "comment": "Un",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 59270400000,
+                    "duration": 2116800000,
+                    "lyric": "til",
+                    "comment": "til",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61387200000,
+                    "duration": 352800000,
+                    "lyric": "to",
+                    "comment": "to",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61740000000,
+                    "duration": 1764000000,
+                    "lyric": "night",
+                    "comment": "night",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 63856800000,
+                    "duration": 705600000,
+                    "lyric": "When",
+                    "comment": "When",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64562400000,
+                    "duration": 352800000,
+                    "lyric": "we",
+                    "comment": "we",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64915200000,
+                    "duration": 1411200000,
+                    "lyric": "looked",
+                    "comment": "looked",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66326400000,
+                    "duration": 470400000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66796800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "at",
+                    "comment": "at",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67267200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "each",
+                    "comment": "each",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67737600000.0,
+                    "duration": 352800000,
+                    "lyric": "oth",
+                    "comment": "oth",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 68090400000.0,
+                    "duration": 2469600000,
+                    "lyric": "er",
+                    "comment": "er",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 70560000000.0,
+                    "duration": 352800000,
+                    "lyric": "That",
+                    "comment": "That",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72324000000.0,
+                    "duration": 352800000,
+                    "lyric": "was",
+                    "comment": "was",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72676800000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 73029600000.0,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75146400000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75499200000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75852000000.0,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77968800000.0,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78321600000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78674400000.0,
+                    "duration": 1411200000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 80085600000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81144000000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81849600000.0,
+                    "duration": 352800000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82202400000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82908000000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83613600000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 84319200000.0,
+                    "duration": 705600000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85024800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85495200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85965600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86436000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86906400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 87376800000.0,
+                    "duration": 5644800000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 96549600000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97608000000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97960800000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 98313600000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102194400000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102547200000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 50,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102900000000.0,
+                    "duration": 529200000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103429200000.0,
+                    "duration": 529200000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103958400000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 104311200000.0,
+                    "duration": 1058400000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 105369600000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 106428000000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 107133600000.0,
+                    "duration": 2822400000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110426400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110896800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111367200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111837600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112308000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112778400000.0,
+                    "duration": 3175200000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 119128800000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120187200000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120540000000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120892800000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "name": "Unnamed Track",
+            "dbName": "Eleanor Forte",
+            "color": "15e879",
+            "displayOrder": 3,
+            "dbDefaults": {},
+            "notes": [
+                {
+                    "onset": 2822400000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4586400000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 4939200000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 5292000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7408800000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 7761600000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 8114400000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10231200000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10584000000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 10936800000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 11642400000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 13759200000,
+                    "duration": 352800000,
+                    "lyric": "It",
+                    "comment": "It",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 14112000000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 15876000000,
+                    "duration": 352800000,
+                    "lyric": "ed",
+                    "comment": "ed",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16228800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 16581600000,
+                    "duration": 1411200000,
+                    "lyric": "mo",
+                    "comment": "mo",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 17992800000,
+                    "duration": 705600000,
+                    "lyric": "ment",
+                    "comment": "ment",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 18698400000,
+                    "duration": 705600000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 19404000000,
+                    "duration": 3175200000,
+                    "lyric": "go",
+                    "comment": "go",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 25401600000,
+                    "duration": 705600000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27165600000,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27518400000,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 27871200000,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 29988000000,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30340800000,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 30693600000,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 32810400000,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33163200000,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 33516000000,
+                    "duration": 705600000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 34221600000,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 35985600000,
+                    "duration": 352800000,
+                    "lyric": "I",
+                    "comment": "I",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 36338400000,
+                    "duration": 2116800000,
+                    "lyric": "know",
+                    "comment": "know",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38455200000,
+                    "duration": 352800000,
+                    "lyric": "for",
+                    "comment": "for",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 38808000000,
+                    "duration": 352800000,
+                    "lyric": "your",
+                    "comment": "your",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 39160800000,
+                    "duration": 1764000000,
+                    "lyric": "eyes",
+                    "comment": "eyes",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41277600000,
+                    "duration": 705600000,
+                    "lyric": "tell",
+                    "comment": "tell",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 41983200000,
+                    "duration": 352800000,
+                    "lyric": "me",
+                    "comment": "me",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 42336000000,
+                    "duration": 2822400000,
+                    "lyric": "so",
+                    "comment": "so",
+                    "pitch": 60,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 45158400000,
+                    "duration": 1411200000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 46569600000,
+                    "duration": 1411200000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 47980800000,
+                    "duration": 2116800000,
+                    "lyric": "We",
+                    "comment": "We",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50097600000,
+                    "duration": 352800000,
+                    "lyric": "were",
+                    "comment": "were",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 50450400000,
+                    "duration": 705600000,
+                    "lyric": "al",
+                    "comment": "al",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 51156000000,
+                    "duration": 1764000000,
+                    "lyric": "ways",
+                    "comment": "ways",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 52920000000,
+                    "duration": 705600000,
+                    "lyric": "Like",
+                    "comment": "Like",
+                    "pitch": 48,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 53625600000,
+                    "duration": 1058400000,
+                    "lyric": "sis",
+                    "comment": "sis",
+                    "pitch": 50,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 54684000000,
+                    "duration": 1058400000,
+                    "lyric": "ter",
+                    "comment": "ter",
+                    "pitch": 50,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 55742400000,
+                    "duration": 705600000,
+                    "lyric": "and",
+                    "comment": "and",
+                    "pitch": 50,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56448000000,
+                    "duration": 352800000,
+                    "lyric": "bro",
+                    "comment": "bro",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 56800800000,
+                    "duration": 1764000000,
+                    "lyric": "ther",
+                    "comment": "ther",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 58564800000,
+                    "duration": 705600000,
+                    "lyric": "Un",
+                    "comment": "Un",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 59270400000,
+                    "duration": 2116800000,
+                    "lyric": "til",
+                    "comment": "til",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61387200000,
+                    "duration": 352800000,
+                    "lyric": "to",
+                    "comment": "to",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 61740000000,
+                    "duration": 1764000000,
+                    "lyric": "night",
+                    "comment": "night",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 63856800000,
+                    "duration": 705600000,
+                    "lyric": "When",
+                    "comment": "When",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64562400000,
+                    "duration": 352800000,
+                    "lyric": "we",
+                    "comment": "we",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 64915200000,
+                    "duration": 1411200000,
+                    "lyric": "looked",
+                    "comment": "looked",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66326400000,
+                    "duration": 470400000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 66796800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "at",
+                    "comment": "at",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67267200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "each",
+                    "comment": "each",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 67737600000.0,
+                    "duration": 352800000,
+                    "lyric": "oth",
+                    "comment": "oth",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 68090400000.0,
+                    "duration": 2469600000,
+                    "lyric": "er",
+                    "comment": "er",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 70560000000.0,
+                    "duration": 352800000,
+                    "lyric": "That",
+                    "comment": "That",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72324000000.0,
+                    "duration": 352800000,
+                    "lyric": "was",
+                    "comment": "was",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 72676800000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 73029600000.0,
+                    "duration": 1764000000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75146400000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75499200000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 75852000000.0,
+                    "duration": 2116800000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 77968800000.0,
+                    "duration": 352800000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78321600000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 78674400000.0,
+                    "duration": 1411200000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 80085600000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81144000000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 81849600000.0,
+                    "duration": 352800000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82202400000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 82908000000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 83613600000.0,
+                    "duration": 705600000,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 84319200000.0,
+                    "duration": 705600000.0,
+                    "lyric": "-",
+                    "comment": "-",
+                    "pitch": 48,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85024800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 52,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85495200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 85965600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86436000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 53,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 86906400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 87376800000.0,
+                    "duration": 5644800000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 48,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 96549600000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 42,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97608000000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 44,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 97960800000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 42,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 98313600000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 48,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102194400000.0,
+                    "duration": 352800000,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 47,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102547200000.0,
+                    "duration": 352800000,
+                    "lyric": "a",
+                    "comment": "a",
+                    "pitch": 46,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 102900000000.0,
+                    "duration": 529200000,
+                    "lyric": "beau",
+                    "comment": "beau",
+                    "pitch": 47,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103429200000.0,
+                    "duration": 529200000,
+                    "lyric": "ti",
+                    "comment": "ti",
+                    "pitch": 47,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 103958400000.0,
+                    "duration": 352800000,
+                    "lyric": "ful",
+                    "comment": "ful",
+                    "pitch": 51,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 104311200000.0,
+                    "duration": 1058400000,
+                    "lyric": "friend",
+                    "comment": "friend",
+                    "pitch": 50,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 105369600000.0,
+                    "duration": 352800000,
+                    "lyric": "ship",
+                    "comment": "ship",
+                    "pitch": 49,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 106428000000.0,
+                    "duration": 705600000,
+                    "lyric": "And",
+                    "comment": "And",
+                    "pitch": 55,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 107133600000.0,
+                    "duration": 2822400000,
+                    "lyric": "just",
+                    "comment": "just",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110426400000.0,
+                    "duration": 470400000.0,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 59,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 110896800000.0,
+                    "duration": 470400000.0,
+                    "lyric": "be",
+                    "comment": "be",
+                    "pitch": 58,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111367200000.0,
+                    "duration": 470400000.0,
+                    "lyric": "gin",
+                    "comment": "gin",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 111837600000.0,
+                    "duration": 470400000.0,
+                    "lyric": "ning",
+                    "comment": "ning",
+                    "pitch": 54,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112308000000.0,
+                    "duration": 470400000.0,
+                    "lyric": "of",
+                    "comment": "of",
+                    "pitch": 57,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 112778400000.0,
+                    "duration": 3175200000,
+                    "lyric": "love",
+                    "comment": "love",
+                    "pitch": 56,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 119128800000.0,
+                    "duration": 1058400000,
+                    "lyric": "This",
+                    "comment": "This",
+                    "pitch": 42,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120187200000.0,
+                    "duration": 352800000,
+                    "lyric": "is",
+                    "comment": "is",
+                    "pitch": 44,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120540000000.0,
+                    "duration": 352800000,
+                    "lyric": "the",
+                    "comment": "the",
+                    "pitch": 46,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+                {
+                    "onset": 120892800000.0,
+                    "duration": 3175200000,
+                    "lyric": "end",
+                    "comment": "end",
+                    "pitch": 42,
+                    "dF0Vbr": 0.0,
+                    "dF0Jitter": 0.0
+                },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+            ],
+            "gsEvents": null,
+            "mixer": {
+                "gainDecibel": 0.0,
+                "pan": 0.0,
+                "muted": false,
+                "solo": false,
+                "engineOn": true,
+                "display": true
+            },
+            "parameters": {
+                "interval": 5512500,
+                "pitchDelta": [
+                    0,
+                    0
+                ],
+                "vibratoEnv": [
+                    0,
+                    0
+                ],
+                "loudness": [
+                    0,
+                    0
+                ],
+                "tension": [
+                    0,
+                    0
+                ],
+                "breathiness": [
+                    0,
+                    0
+                ],
+                "voicing": [
+                    0,
+                    0
+                ],
+                "gender": [
+                    0,
+                    0
+                ]
+            }
+        },
+    ],
+    "instrumental": {
+        "filename": "",
+        "offset": 0.0
+    },
+    "mixer": {
+        "gainInstrumentalDecibel": 0.0,
+        "gainVocalMasterDecibel": 0.0,
+        "instrumentalMuted": false,
+        "vocalMasterMuted": false
+    }
+}

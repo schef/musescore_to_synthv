@@ -2,6 +2,17 @@
 
 import xml.etree.ElementTree as ET
 
+DEBUG = False
+_builtin_print = print
+
+
+def _debug_print(*args, **kwargs):
+    if DEBUG:
+        _builtin_print(*args, **kwargs)
+
+
+print = _debug_print
+
 
 class txt:
     TAB = "  "
@@ -18,6 +29,7 @@ class txt:
 
 set_staff_start_cb = None
 set_staff_end_cb = None
+set_staff_name_cb = None
 set_time_signature_cb = None
 set_pitch_cb = None
 set_rest_cb = None
@@ -28,6 +40,13 @@ set_tempo_cb = None
 set_tuplet_cb = None
 
 SET_TAB = txt.TAB * 30
+
+
+def set_staff_name(staff_id, name):
+    print(SET_TAB + txt.CRED + "set_staff_name" + txt.CEND, staff_id, name)
+    global set_staff_name_cb
+    if set_staff_name_cb:
+        set_staff_name_cb(staff_id, name)
 
 
 def set_time_signature(n, d):
@@ -157,7 +176,29 @@ def parse_tempo(v):
             set_tempo(t.text)
 
 
+def parse_parts(r):
+    for part in r.findall("./Score/Part"):
+        staff_ids = [s.attrib.get("id") for s in part.findall("./Staff")]
+        staff_ids = [sid for sid in staff_ids if sid]
+        name = None
+        name_node = part.find("./trackName")
+        if name_node is not None and name_node.text:
+            name = name_node.text
+        else:
+            instrument_name = part.find("./Instrument/trackName")
+            if instrument_name is not None and instrument_name.text:
+                name = instrument_name.text
+            else:
+                long_name = part.find("./Instrument/longName")
+                if long_name is not None and long_name.text:
+                    name = long_name.text
+        if name:
+            for staff_id in staff_ids:
+                set_staff_name(staff_id, name)
+
+
 def parse_root(r):
+    parse_parts(r)
     for s in r.findall("./Score/Staff"):
         print(
             txt.CBLUE + s.tag + txt.CEND,
@@ -166,7 +207,7 @@ def parse_root(r):
         m_count = 0
         global set_staff_start_cb
         if set_staff_start_cb:
-            set_staff_start_cb()
+            set_staff_start_cb(s.attrib.get("id"))
         for m in s.findall("./"):
             print(
                 txt.TAB * 1,
@@ -219,6 +260,7 @@ def parse_xml(
     xml_file,
     set_staff_start_func=None,
     set_staff_end_func=None,
+    set_staff_name_func=None,
     set_time_signature_func=None,
     set_pitch_func=None,
     set_rest_func=None,
@@ -234,6 +276,9 @@ def parse_xml(
     if set_staff_end_func:
         global set_staff_end_cb
         set_staff_end_cb = set_staff_end_func
+    if set_staff_name_func:
+        global set_staff_name_cb
+        set_staff_name_cb = set_staff_name_func
     if set_time_signature_func:
         global set_time_signature_cb
         set_time_signature_cb = set_time_signature_func
