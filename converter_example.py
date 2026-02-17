@@ -33,6 +33,8 @@ staff_names = {}
 current_staff_id = None
 pickup_offset = 0
 pending_pickup_len = None
+voice_filter_ids = set()
+voice_filter_names = set()
 
 
 def get_time_signature_duration(n, d):
@@ -414,8 +416,9 @@ def set_staff_end():
     global tracks_data
     global staff_num
     name = staff_names.get(current_staff_id, "Unnamed Track")
-    tracks_data.append(build_track_data(current_notes, staff_num, name))
-    staff_num += 1
+    if should_include_voice(current_staff_id, name):
+        tracks_data.append(build_track_data(current_notes, staff_num, name))
+        staff_num += 1
 
 
 def apply_pickup_offset(pickup_len):
@@ -579,6 +582,16 @@ def write_to_file(file_name, data):
         write_file.write(data)
 
 
+def should_include_voice(staff_id, name):
+    if not voice_filter_ids and not voice_filter_names:
+        return True
+    if staff_id and staff_id in voice_filter_ids:
+        return True
+    if name and name.lower() in voice_filter_names:
+        return True
+    return False
+
+
 @click.command()
 @click.argument("readfile", type=click.Path(exists=True))
 @click.argument("writefile", type=click.Path(exists=False))
@@ -592,7 +605,8 @@ def write_to_file(file_name, data):
     default="8",
 )
 @click.option("-v", "--verbose", is_flag=True)
-def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
+@click.option("--voices", default="")
+def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose, voices):
     global use_hr_dict
     global shuffle_percent
     global shuffle_unit
@@ -605,6 +619,8 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
     global current_staff_id
     global pickup_offset
     global pending_pickup_len
+    global voice_filter_ids
+    global voice_filter_names
     use_hr_dict = dict
     shuffle_percent = max(0.0, min(100.0, float(shuffle)))
     shuffle_unit = int(shuffle_unit_option)
@@ -618,6 +634,17 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
     current_staff_id = None
     pickup_offset = 0
     pending_pickup_len = None
+    voice_filter_ids = set()
+    voice_filter_names = set()
+    if voices:
+        for entry in voices.split(","):
+            token = entry.strip()
+            if not token:
+                continue
+            if token.isdigit():
+                voice_filter_ids.add(token)
+            else:
+                voice_filter_names.add(token.lower())
     MP.parse_xml(
         click.format_filename(readfile),
         set_staff_start,
