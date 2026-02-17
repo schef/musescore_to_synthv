@@ -38,6 +38,7 @@ pickup_offset = 0
 pending_pickup_len = None
 voice_filter_ids = set()
 voice_filter_names = set()
+project_title = None
 
 
 def get_time_signature_duration(n, d):
@@ -363,6 +364,7 @@ def build_track_data(notes, display_order, track_name):
 
 
 def build_project_data(tracks):
+    global project_title
     numerator = time_signature_n or 4
     denominator = time_signature_d or 4
     tempo_output = tempo_events[:]
@@ -389,7 +391,7 @@ def build_project_data(tracks):
         "tracks": tracks,
         "renderConfig": {
             "destination": "",
-            "filename": "untitled",
+            "filename": project_title or "untitled",
             "numChannels": 1,
             "aspirationFormat": "noAspiration",
             "bitDepth": 16,
@@ -670,6 +672,17 @@ def load_score_info(readfile):
     }
 
 
+def load_project_title(readfile):
+    root = ET.parse(readfile).getroot()
+    for tag in ["workTitle", "movementTitle", "title"]:
+        node = root.find(f"./Score/metaTag[@name='{tag}']")
+        if node is not None and node.text:
+            title = node.text.strip()
+            if title:
+                return title
+    return None
+
+
 app = typer.Typer(add_completion=False)
 
 
@@ -737,6 +750,7 @@ def main(
     global pending_pickup_len
     global voice_filter_ids
     global voice_filter_names
+    global project_title
     use_hr_dict = dict
     shuffle_percent = max(0.0, min(100.0, float(shuffle)))
     if shuffle_unit_option not in {"8", "16"}:
@@ -746,6 +760,7 @@ def main(
     if info:
         staff_info = load_staff_info(str(readfile))
         score_info = load_score_info(str(readfile))
+        project_title = load_project_title(str(readfile))
         typer.echo(f"Staff count: {len(staff_info)}")
         for staff_id, name in staff_info:
             typer.echo(f"Staff {staff_id}: {name}")
@@ -770,9 +785,12 @@ def main(
                 typer.echo(f"Pickup measure: {pickup_beats:.2f}/{full_beats:.2f} beats")
             else:
                 typer.echo("Pickup measure: none")
+        if project_title:
+            typer.echo(f"Title: {project_title}")
         raise typer.Exit()
     if writefile is None:
         raise typer.BadParameter("writefile is required unless --info is used")
+    project_title = load_project_title(str(readfile))
     tracks_data = []
     tempo_events = []
     staff_num = 0
