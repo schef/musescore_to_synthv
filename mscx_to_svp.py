@@ -3,7 +3,9 @@
 import json
 import re
 import uuid
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from typing import Optional
 import typer
 import musescore_parser as MP
 import jp_to_hr
@@ -593,6 +595,81 @@ def should_include_voice(staff_id, name):
     return False
 
 
+def load_staff_info(readfile):
+    root = ET.parse(readfile).getroot()
+    staff_info = []
+    for part in root.findall("./Score/Part"):
+        staff_ids = [s.attrib.get("id") for s in part.findall("./Staff")]
+        staff_ids = [sid for sid in staff_ids if sid]
+        name_node = part.find("./trackName")
+        if name_node is not None and name_node.text:
+            name = name_node.text
+        else:
+            instrument_name = part.find("./Instrument/trackName")
+            if instrument_name is not None and instrument_name.text:
+                name = instrument_name.text
+            else:
+                long_name = part.find("./Instrument/longName")
+                name = long_name.text if long_name is not None else None
+        for staff_id in staff_ids:
+            staff_info.append((staff_id, name or "Unnamed Track"))
+    return staff_info
+
+
+def load_score_info(readfile):
+    root = ET.parse(readfile).getroot()
+    staff_nodes = root.findall("./Score/Staff")
+    if not staff_nodes:
+        return None
+    staff = staff_nodes[0]
+    measures = staff.findall("./Measure")
+    measure_count = len(measures)
+    time_sigs = []
+    time_sig_set = set()
+    tempos = []
+    for measure in measures:
+        voice = measure.find("./voice")
+        if voice is None:
+            continue
+        for tempo_node in voice.findall("./Tempo"):
+            tempo_value = tempo_node.findtext("./tempo")
+            if tempo_value is None:
+                continue
+            try:
+                bpm = float(tempo_value) * 60.0
+            except ValueError:
+                continue
+            tempos.append(bpm)
+        time_sig_node = voice.find("./TimeSig")
+        if time_sig_node is None:
+            continue
+        sig_n = time_sig_node.findtext("./sigN")
+        sig_d = time_sig_node.findtext("./sigD")
+        if not sig_n or not sig_d:
+            continue
+        try:
+            sig = (int(sig_n), int(sig_d))
+        except ValueError:
+            continue
+        if sig in time_sig_set:
+            continue
+        time_sig_set.add(sig)
+        time_sigs.append(sig)
+    pickup = None
+    if measures:
+        measure_len = get_measure_length(measures[0].attrib.get("len"))
+        if measure_len is not None and time_sigs:
+            full_len = get_time_signature_duration(*time_sigs[0])
+            if full_len and measure_len < full_len:
+                pickup = (measure_len, full_len)
+    return {
+        "measure_count": measure_count,
+        "time_signatures": time_sigs,
+        "tempos": tempos,
+        "pickup": pickup,
+    }
+
+
 app = typer.Typer(add_completion=False)
 
 
@@ -605,11 +682,11 @@ def main(
         readable=True,
         help="Input MuseScore .mscx file.",
     ),
-    writefile: Path = typer.Argument(
-        ...,
+    writefile: Optional[Path] = typer.Argument(
+        None,
         dir_okay=False,
         writable=True,
-        help="Output SynthV .svp file.",
+        help="Output SynthV .svp file (required unless --info).",
     ),
     dict: bool = typer.Option(
         False,
@@ -634,6 +711,11 @@ def main(
         "-v",
         "--verbose",
         help="Enable parser debug output.",
+    ),
+    info: bool = typer.Option(
+        False,
+        "--info",
+        help="Print staff names and counts, then exit.",
     ),
     voices: str = typer.Option(
         "",
@@ -661,6 +743,36 @@ def main(
         raise typer.BadParameter("shuffle-unit must be 8 or 16")
     shuffle_unit = int(shuffle_unit_option)
     MP.DEBUG = verbose
+    if info:
+        staff_info = load_staff_info(str(readfile))
+        score_info = load_score_info(str(readfile))
+        typer.echo(f"Staff count: {len(staff_info)}")
+        for staff_id, name in staff_info:
+            typer.echo(f"Staff {staff_id}: {name}")
+        if score_info:
+            typer.echo(f"Bar count: {score_info['measure_count']}")
+            if score_info["time_signatures"]:
+                sig_list = ", ".join(
+                    f"{sig_n}/{sig_d}" for sig_n, sig_d in score_info["time_signatures"]
+                )
+                typer.echo(f"Time signatures: {sig_list}")
+            else:
+                typer.echo("Time signatures: unknown")
+            if score_info["tempos"]:
+                tempo_list = ", ".join(f"{tempo:.2f}" for tempo in score_info["tempos"])
+                typer.echo(f"Tempo changes: {tempo_list} BPM")
+            else:
+                typer.echo("Tempo changes: none")
+            if score_info["pickup"]:
+                pickup_len, full_len = score_info["pickup"]
+                pickup_beats = pickup_len / ONE_BEAT
+                full_beats = full_len / ONE_BEAT
+                typer.echo(f"Pickup measure: {pickup_beats:.2f}/{full_beats:.2f} beats")
+            else:
+                typer.echo("Pickup measure: none")
+        raise typer.Exit()
+    if writefile is None:
+        raise typer.BadParameter("writefile is required unless --info is used")
     tracks_data = []
     tempo_events = []
     staff_num = 0
