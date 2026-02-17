@@ -30,6 +30,7 @@ class txt:
 set_staff_start_cb = None
 set_staff_end_cb = None
 set_staff_name_cb = None
+set_measure_len_cb = None
 set_time_signature_cb = None
 set_pitch_cb = None
 set_rest_cb = None
@@ -47,6 +48,13 @@ def set_staff_name(staff_id, name):
     global set_staff_name_cb
     if set_staff_name_cb:
         set_staff_name_cb(staff_id, name)
+
+
+def set_measure_len(length_value, measure_index):
+    print(SET_TAB + txt.CRED + "set_measure_len" + txt.CEND, length_value)
+    global set_measure_len_cb
+    if set_measure_len_cb:
+        set_measure_len_cb(length_value, measure_index)
 
 
 def set_time_signature(n, d):
@@ -216,6 +224,7 @@ def parse_root(r):
                 [m.attrib, m.tail.strip(), str(m.text).strip()],
             )
             if m.tag == "Measure":
+                set_measure_len(m.attrib.get("len"), m_count)
                 m_count += 1
                 for w in m.findall("./"):
                     print(
@@ -261,6 +270,7 @@ def parse_xml(
     set_staff_start_func=None,
     set_staff_end_func=None,
     set_staff_name_func=None,
+    set_measure_len_func=None,
     set_time_signature_func=None,
     set_pitch_func=None,
     set_rest_func=None,
@@ -279,6 +289,9 @@ def parse_xml(
     if set_staff_name_func:
         global set_staff_name_cb
         set_staff_name_cb = set_staff_name_func
+    if set_measure_len_func:
+        global set_measure_len_cb
+        set_measure_len_cb = set_measure_len_func
     if set_time_signature_func:
         global set_time_signature_cb
         set_time_signature_cb = set_time_signature_func

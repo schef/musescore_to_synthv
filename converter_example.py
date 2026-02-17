@@ -31,6 +31,8 @@ current_notes = []
 tracks_data = []
 staff_names = {}
 current_staff_id = None
+pickup_offset = 0
+pending_pickup_len = None
 
 
 def get_time_signature_duration(n, d):
@@ -41,6 +43,23 @@ def get_time_signature_duration(n, d):
         return int(ONE_BEAT * 3)
     elif n == 6 and d == 8:
         return int(6 * int(ONE_BEAT / 2))
+
+
+def get_measure_length(length_value):
+    if not length_value:
+        return None
+    if "/" not in length_value:
+        return None
+    try:
+        numerator, denominator = length_value.split("/", 1)
+        numerator = int(numerator.strip())
+        denominator = int(denominator.strip())
+    except ValueError:
+        return None
+    if denominator == 0:
+        return None
+    whole_note = int(ONE_BEAT * 4)
+    return int(whole_note * numerator / denominator)
 
 
 duration_type = {
@@ -323,10 +342,14 @@ def set_staff_start(staff_id):
     global onset
     global current_notes
     global current_staff_id
+    global pickup_offset
+    global pending_pickup_len
     onset = 0
     # print(generate_staff_start())
     current_notes = []
     current_staff_id = staff_id
+    pickup_offset = 0
+    pending_pickup_len = None
 
 
 def set_staff_end():
@@ -336,6 +359,30 @@ def set_staff_end():
     name = staff_names.get(current_staff_id, "Unnamed Track")
     tracks_data.append(build_track_data(current_notes, staff_num, name))
     staff_num += 1
+
+
+def apply_pickup_offset(pickup_len):
+    global pickup_offset
+    if pickup_len is None:
+        return
+    if duration_type["measure"] is None:
+        return
+    offset = duration_type["measure"] - pickup_len
+    if offset > 0:
+        pickup_offset = offset
+
+
+def set_measure_len(length_value, measure_index):
+    global pending_pickup_len
+    if measure_index != 0:
+        return
+    pickup_len = get_measure_length(length_value)
+    if pickup_len is None:
+        return
+    if duration_type["measure"] is None:
+        pending_pickup_len = pickup_len
+        return
+    apply_pickup_offset(pickup_len)
 
 
 def set_staff_name(staff_id, name):
@@ -355,6 +402,10 @@ def set_time_signature(n, d):
     duration_type["measure"] = get_time_signature_duration(
         time_signature_n, time_signature_d
     )
+    global pending_pickup_len
+    if pending_pickup_len:
+        apply_pickup_offset(pending_pickup_len)
+        pending_pickup_len = None
 
 
 def set_pitch(p, d):
@@ -366,6 +417,7 @@ def set_pitch(p, d):
     global tie
     global dot
     global current_notes
+    global pickup_offset
 
     pitch = int(p)
     duration += duration_type[d]
@@ -387,15 +439,16 @@ def set_pitch(p, d):
         if lyric == "":
             lyric = "-"
         # print(generate_note())
-        shuffle_offset = get_shuffle_offset(onset)
-        output_onset = onset
+        base_onset = onset + pickup_offset
+        shuffle_offset = get_shuffle_offset(base_onset)
+        output_onset = base_onset
         output_duration = duration
         if shuffle_offset > 0:
-            output_onset = onset + shuffle_offset
+            output_onset = base_onset + shuffle_offset
             output_duration = max(0, duration - shuffle_offset)
             if current_notes:
                 last_note = current_notes[-1]
-                if last_note["onset"] + last_note["duration"] == onset:
+                if last_note["onset"] + last_note["duration"] == base_onset:
                     last_note["duration"] += shuffle_offset
         current_notes.append(
             build_note_data(output_onset, output_duration, lyric, pitch)
@@ -458,7 +511,10 @@ def set_tempo(tempo):
     except ValueError:
         return
     global tempo_events
-    tempo_events.append((onset, bpm))
+    position = onset
+    if onset > 0:
+        position = onset + pickup_offset
+    tempo_events.append((position, bpm))
 
 
 def write_to_file(file_name, data):
@@ -490,6 +546,8 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
     global time_signature_d
     global staff_names
     global current_staff_id
+    global pickup_offset
+    global pending_pickup_len
     use_hr_dict = dict
     shuffle_percent = max(0.0, min(100.0, float(shuffle)))
     shuffle_unit = int(shuffle_unit_option)
@@ -501,11 +559,14 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose):
     time_signature_d = 0
     staff_names = {}
     current_staff_id = None
+    pickup_offset = 0
+    pending_pickup_len = None
     MP.parse_xml(
         click.format_filename(readfile),
         set_staff_start,
         set_staff_end,
         set_staff_name,
+        set_measure_len,
         set_time_signature,
         set_pitch,
         set_rest,
