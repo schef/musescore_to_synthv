@@ -78,14 +78,31 @@ def generate_lyric(l):
         return "-"
     global use_hr_dict
     if use_hr_dict:
-        string = "."
-        for letter in l:
-            try:
-                string += jp_to_hr.jp_to_hr[letter.lower()] + " "
-            except KeyError:
-                pass
-        return string[:-1]
+        tokens = map_hr_text_to_tokens(l)
+        if not tokens:
+            return "-"
+        return "." + " ".join(tokens)
     return re.sub(r"\W+", "", l)
+
+
+def map_hr_text_to_tokens(text):
+    if not text:
+        return []
+    text = text.lower()
+    tokens = []
+    index = 0
+    while index < len(text):
+        digraph = text[index : index + 2]
+        if digraph in jp_to_hr.jp_to_hr:
+            mapped = jp_to_hr.jp_to_hr.get(digraph)
+            index += 2
+        else:
+            mapped = jp_to_hr.jp_to_hr.get(text[index])
+            index += 1
+        if not mapped:
+            continue
+        tokens.extend(mapped.split())
+    return tokens
 
 
 def apply_syllabic_r(phoneme_string):
@@ -120,7 +137,8 @@ def apply_syllabic_r(phoneme_string):
             prev_vowel = prev_token in vowel_tokens if prev_token else False
             next_vowel = next_token in vowel_tokens if next_token else False
             if not prev_vowel and not next_vowel:
-                updated.append("er")
+                updated.append("ax")
+                updated.append("r")
                 continue
         updated.append(token)
     return " ".join(updated)
@@ -131,13 +149,10 @@ def generate_phonemes(l):
         return "-"
     global use_hr_dict
     if use_hr_dict:
-        string = ""
-        for letter in l:
-            try:
-                string += jp_to_hr.jp_to_hr[letter.lower()] + " "
-            except KeyError:
-                pass
-        return apply_syllabic_r(string.strip())
+        tokens = map_hr_text_to_tokens(l)
+        if not tokens:
+            return "-"
+        return apply_syllabic_r(" ".join(tokens))
     return apply_syllabic_r(re.sub(r"\W+", " ", l).strip())
 
 
