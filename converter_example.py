@@ -88,6 +88,44 @@ def generate_lyric(l):
     return re.sub(r"\W+", "", l)
 
 
+def apply_syllabic_r(phoneme_string):
+    if not phoneme_string:
+        return phoneme_string
+    tokens = phoneme_string.split()
+    if not tokens:
+        return phoneme_string
+    vowel_tokens = {
+        "aa",
+        "ae",
+        "ah",
+        "ao",
+        "aw",
+        "ay",
+        "eh",
+        "er",
+        "ey",
+        "ih",
+        "iy",
+        "ow",
+        "oy",
+        "uh",
+        "uw",
+        "ax",
+    }
+    updated = []
+    for idx, token in enumerate(tokens):
+        if token == "r":
+            prev_token = tokens[idx - 1] if idx > 0 else None
+            next_token = tokens[idx + 1] if idx < len(tokens) - 1 else None
+            prev_vowel = prev_token in vowel_tokens if prev_token else False
+            next_vowel = next_token in vowel_tokens if next_token else False
+            if not prev_vowel and not next_vowel:
+                updated.append("er")
+                continue
+        updated.append(token)
+    return " ".join(updated)
+
+
 def generate_phonemes(l):
     if l in ["-", "", "", None]:
         return "-"
@@ -99,8 +137,8 @@ def generate_phonemes(l):
                 string += jp_to_hr.jp_to_hr[letter.lower()] + " "
             except KeyError:
                 pass
-        return string.strip()
-    return re.sub(r"\W+", " ", l).strip()
+        return apply_syllabic_r(string.strip())
+    return apply_syllabic_r(re.sub(r"\W+", " ", l).strip())
 
 
 def format_bpm(bpm):
