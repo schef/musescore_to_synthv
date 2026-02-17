@@ -217,14 +217,18 @@ def build_note_data(onset_value, duration_value, lyric_value, pitch_value):
         "accent": "",
         "pitch": pitch_value,
         "detune": 0,
-        "instantMode": False,
+        "instantMode": True,
         "attributes": {
-            "dF0Vbr": 0.0,
-            "dF0Jitter": 0.0,
             "evenSyllableDuration": False,
         },
         "systemAttributes": {
-            "evenSyllableDuration": True,
+            "tF0Offset": -0.0,
+            "tF0Left": 0.125,
+            "tF0Right": 0.125,
+            "dF0Left": 0.0,
+            "dF0Right": 0.0,
+            "dF0Vbr": 0.0,
+            "evenSyllableDuration": False,
         },
         "pitchTakes": {
             "activeTakeId": 0,
@@ -270,13 +274,13 @@ def get_shuffle_offset(onset_value):
 
 def build_default_parameters():
     return {
-        "pitchDelta": {"mode": "linear", "points": [0, 0.0]},
-        "vibratoEnv": {"mode": "linear", "points": [0, 1.0]},
-        "loudness": {"mode": "linear", "points": [0, 0.0]},
-        "tension": {"mode": "linear", "points": [0, 0.0]},
-        "breathiness": {"mode": "linear", "points": [0, 0.0]},
-        "voicing": {"mode": "linear", "points": [0, 1.0]},
-        "gender": {"mode": "linear", "points": [0, 0.0]},
+        "pitchDelta": {"mode": "linear", "points": []},
+        "vibratoEnv": {"mode": "linear", "points": []},
+        "loudness": {"mode": "linear", "points": []},
+        "tension": {"mode": "linear", "points": []},
+        "breathiness": {"mode": "linear", "points": []},
+        "voicing": {"mode": "linear", "points": []},
+        "gender": {"mode": "linear", "points": []},
         "toneShift": {"mode": "cubic", "points": []},
     }
 
