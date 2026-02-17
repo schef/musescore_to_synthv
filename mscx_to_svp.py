@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import click
 import json
 import re
 import uuid
+from pathlib import Path
+import typer
 import musescore_parser as MP
 import jp_to_hr
 
@@ -592,21 +593,54 @@ def should_include_voice(staff_id, name):
     return False
 
 
-@click.command()
-@click.argument("readfile", type=click.Path(exists=True))
-@click.argument("writefile", type=click.Path(exists=False))
-@click.option("-d", "--dict", is_flag=True)
-@click.option("-s", "--shuffle", type=float, default=0.0)
-@click.option(
-    "-u",
-    "--shuffle-unit",
-    "shuffle_unit_option",
-    type=click.Choice(["8", "16"]),
-    default="8",
-)
-@click.option("-v", "--verbose", is_flag=True)
-@click.option("--voices", default="")
-def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose, voices):
+app = typer.Typer(add_completion=False)
+
+
+@app.command()
+def main(
+    readfile: Path = typer.Argument(
+        ...,
+        exists=True,
+        dir_okay=False,
+        readable=True,
+        help="Input MuseScore .mscx file.",
+    ),
+    writefile: Path = typer.Argument(
+        ...,
+        dir_okay=False,
+        writable=True,
+        help="Output SynthV .svp file.",
+    ),
+    dict: bool = typer.Option(
+        False,
+        "-d",
+        "--dict",
+        help="Use Croatian phoneme dictionary mapping.",
+    ),
+    shuffle: float = typer.Option(
+        0.0,
+        "-s",
+        "--shuffle",
+        help="Shuffle percent for swing timing.",
+    ),
+    shuffle_unit_option: str = typer.Option(
+        "8",
+        "-u",
+        "--shuffle-unit",
+        help="Shuffle subdivision unit (8 or 16).",
+    ),
+    verbose: bool = typer.Option(
+        False,
+        "-v",
+        "--verbose",
+        help="Enable parser debug output.",
+    ),
+    voices: str = typer.Option(
+        "",
+        "--voices",
+        help="Comma-separated staff IDs or track names to export.",
+    ),
+):
     global use_hr_dict
     global shuffle_percent
     global shuffle_unit
@@ -623,6 +657,8 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose, voice
     global voice_filter_names
     use_hr_dict = dict
     shuffle_percent = max(0.0, min(100.0, float(shuffle)))
+    if shuffle_unit_option not in {"8", "16"}:
+        raise typer.BadParameter("shuffle-unit must be 8 or 16")
     shuffle_unit = int(shuffle_unit_option)
     MP.DEBUG = verbose
     tracks_data = []
@@ -646,7 +682,7 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose, voice
             else:
                 voice_filter_names.add(token.lower())
     MP.parse_xml(
-        click.format_filename(readfile),
+        str(readfile),
         set_staff_start,
         set_staff_end,
         set_staff_name,
@@ -662,7 +698,11 @@ def main(readfile, writefile, dict, shuffle, shuffle_unit_option, verbose, voice
     )
     project = build_project_data(tracks_data)
     json_output = json.dumps(project, ensure_ascii=True)
-    write_to_file(click.format_filename(writefile), json_output)
+    write_to_file(str(writefile), json_output)
+
+
+if __name__ == "__main__":
+    app()
 
 
 if __name__ == "__main__":
