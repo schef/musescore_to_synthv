@@ -98,6 +98,16 @@ def map_hr_text_to_tokens(text):
     tokens = []
     index = 0
     while index < len(text):
+        quad = text[index : index + 4]
+        if quad == "cije":
+            tokens.extend(["t", "s", "y", "eh"])
+            index += 4
+            continue
+        tri = text[index : index + 3]
+        if tri == "ije":
+            tokens.extend(["y", "eh"])
+            index += 3
+            continue
         digraph = text[index : index + 2]
         if digraph in jp_to_hr.jp_to_hr:
             mapped = jp_to_hr.jp_to_hr.get(digraph)
@@ -383,9 +393,7 @@ def build_project_data(tracks):
                     "denominator": denominator,
                 }
             ],
-            "tempo": [
-                {"position": position, "bpm": bpm} for position, bpm in tempo_output
-            ],
+            "tempo": [{"position": position, "bpm": bpm} for position, bpm in tempo_output],
         },
         "library": [],
         "tracks": tracks,
@@ -464,9 +472,7 @@ def set_time_signature(n, d):
     global time_signature_d
     time_signature_d = int(d)
     global duration_type
-    duration_type["measure"] = get_time_signature_duration(
-        time_signature_n, time_signature_d
-    )
+    duration_type["measure"] = get_time_signature_duration(time_signature_n, time_signature_d)
     global pending_pickup_len
     if pending_pickup_len:
         apply_pickup_offset(pending_pickup_len)
@@ -515,9 +521,7 @@ def set_pitch(p, d):
                 last_note = current_notes[-1]
                 if last_note["onset"] + last_note["duration"] == base_onset:
                     last_note["duration"] += shuffle_offset
-        current_notes.append(
-            build_note_data(output_onset, output_duration, lyric, pitch)
-        )
+        current_notes.append(build_note_data(output_onset, output_duration, lyric, pitch))
         onset += duration
         duration = 0
         lyric = ""
@@ -767,9 +771,7 @@ def main(
         if score_info:
             typer.echo(f"Bar count: {score_info['measure_count']}")
             if score_info["time_signatures"]:
-                sig_list = ", ".join(
-                    f"{sig_n}/{sig_d}" for sig_n, sig_d in score_info["time_signatures"]
-                )
+                sig_list = ", ".join(f"{sig_n}/{sig_d}" for sig_n, sig_d in score_info["time_signatures"])
                 typer.echo(f"Time signatures: {sig_list}")
             else:
                 typer.echo("Time signatures: unknown")
