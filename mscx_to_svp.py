@@ -139,6 +139,7 @@ def apply_syllabic_r(phoneme_string):
         "ey",
         "ih",
         "iy",
+        "y",
         "ow",
         "oy",
         "uh",
@@ -168,6 +169,10 @@ def generate_phonemes(l):
         tokens = map_hr_text_to_tokens(l)
         if not tokens:
             return "-"
+        if tokens and tokens[-1] == "d":
+            tokens.append("ax")
+        if tokens and tokens[-1] == "t":
+            tokens.append("ax")
         return apply_syllabic_r(" ".join(tokens))
     return apply_syllabic_r(re.sub(r"\W+", " ", l).strip())
 
