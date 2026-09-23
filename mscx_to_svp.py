@@ -68,15 +68,7 @@ def get_measure_length(length_value):
     return int(whole_note * numerator / denominator)
 
 
-duration_type = {
-    "measure": None,
-    "whole": int(ONE_BEAT * 4),
-    "half": int(ONE_BEAT * 2),
-    "quarter": int(ONE_BEAT),
-    "eighth": int(ONE_BEAT / 2),
-    "16th": int(ONE_BEAT / 4),
-    "32nd": int(ONE_BEAT / 8),
-}
+duration_type = {"measure": None, "whole": int(ONE_BEAT * 4), "half": int(ONE_BEAT * 2), "quarter": int(ONE_BEAT), "eighth": int(ONE_BEAT / 2), "16th": int(ONE_BEAT / 4), "32nd": int(ONE_BEAT / 8)}
 
 
 def generate_lyric(l):
@@ -163,16 +155,12 @@ def apply_syllabic_r(phoneme_string):
 
 def generate_phonemes(l):
     if l in ["-", "", "", None]:
-        return "-"
+        return ""
     global use_hr_dict
     if use_hr_dict:
         tokens = map_hr_text_to_tokens(l)
         if not tokens:
             return "-"
-        if tokens and tokens[-1] == "d":
-            tokens.append("ax")
-        if tokens and tokens[-1] == "t":
-            tokens.append("ax")
         return apply_syllabic_r(" ".join(tokens))
     return apply_syllabic_r(re.sub(r"\W+", " ", l).strip())
 
@@ -239,38 +227,10 @@ def build_note_data(onset_value, duration_value, lyric_value, pitch_value):
         "pitch": pitch_value,
         "detune": 0,
         "instantMode": True,
-        "attributes": {
-            "evenSyllableDuration": False,
-        },
-        "systemAttributes": {
-            "tF0Offset": -0.0,
-            "tF0Left": 0.125,
-            "tF0Right": 0.125,
-            "dF0Left": 0.0,
-            "dF0Right": 0.0,
-            "dF0Vbr": 0.0,
-            "evenSyllableDuration": False,
-        },
-        "pitchTakes": {
-            "activeTakeId": 0,
-            "takes": [
-                {
-                    "id": 0,
-                    "expr": 0.0,
-                    "liked": False,
-                }
-            ],
-        },
-        "timbreTakes": {
-            "activeTakeId": 0,
-            "takes": [
-                {
-                    "id": 0,
-                    "expr": 0.0,
-                    "liked": False,
-                }
-            ],
-        },
+        "attributes": {"evenSyllableDuration": False},
+        "systemAttributes": {"tF0Offset": -0.0, "tF0Left": 0.125, "tF0Right": 0.125, "dF0Left": 0.0, "dF0Right": 0.0, "dF0Vbr": 0.0, "evenSyllableDuration": False},
+        "pitchTakes": {"activeTakeId": 0, "takes": [{"id": 0, "expr": 0.0, "liked": False}]},
+        "timbreTakes": {"activeTakeId": 0, "takes": [{"id": 0, "expr": 0.0, "liked": False}]},
     }
 
 
@@ -315,41 +275,11 @@ def build_main_ref():
         "pitchOffset": 0,
         "isInstrumental": False,
         "systemPitchDelta": {"mode": "cubic", "points": []},
-        "database": {
-            "name": "Mo Chen",
-            "language": "mandarin",
-            "phoneset": "xsampa",
-            "languageOverride": "english",
-            "phonesetOverride": "arpabet",
-            "backendType": "SVR2AI",
-            "version": "109",
-        },
+        "database": {"name": "Mo Chen", "language": "mandarin", "phoneset": "xsampa", "languageOverride": "english", "phonesetOverride": "arpabet", "backendType": "SVR2AI", "version": "109"},
         "dictionary": "",
-        "voice": {
-            "vocalModeInherited": True,
-            "vocalModePreset": "",
-            "vocalModeParams": {},
-        },
-        "pitchTakes": {
-            "activeTakeId": 0,
-            "takes": [
-                {
-                    "id": 0,
-                    "expr": 0.0,
-                    "liked": False,
-                }
-            ],
-        },
-        "timbreTakes": {
-            "activeTakeId": 0,
-            "takes": [
-                {
-                    "id": 0,
-                    "expr": 0.0,
-                    "liked": False,
-                }
-            ],
-        },
+        "voice": {"vocalModeInherited": True, "vocalModePreset": "", "vocalModeParams": {}},
+        "pitchTakes": {"activeTakeId": 0, "takes": [{"id": 0, "expr": 0.0, "liked": False}]},
+        "timbreTakes": {"activeTakeId": 0, "takes": [{"id": 0, "expr": 0.0, "liked": False}]},
     }
 
 
@@ -359,20 +289,8 @@ def build_track_data(notes, display_order, track_name):
         "dispColor": "ff15e879",
         "dispOrder": display_order,
         "renderEnabled": False,
-        "mixer": {
-            "gainDecibel": 0.0,
-            "pan": 0.0,
-            "mute": False,
-            "solo": False,
-            "display": True,
-        },
-        "mainGroup": {
-            "name": "main",
-            "uuid": "main",
-            "parameters": build_default_parameters(),
-            "vocalModes": {},
-            "notes": notes,
-        },
+        "mixer": {"gainDecibel": 0.0, "pan": 0.0, "mute": False, "solo": False, "display": True},
+        "mainGroup": {"name": "main", "uuid": "main", "parameters": build_default_parameters(), "vocalModes": {}, "notes": notes},
         "mainRef": build_main_ref(),
         "groups": [],
     }
@@ -390,28 +308,10 @@ def build_project_data(tracks):
     tempo_output = sorted(tempo_output, key=lambda item: item[0])
     return {
         "version": 153,
-        "time": {
-            "meter": [
-                {
-                    "index": 0,
-                    "numerator": numerator,
-                    "denominator": denominator,
-                }
-            ],
-            "tempo": [{"position": position, "bpm": bpm} for position, bpm in tempo_output],
-        },
+        "time": {"meter": [{"index": 0, "numerator": numerator, "denominator": denominator}], "tempo": [{"position": position, "bpm": bpm} for position, bpm in tempo_output]},
         "library": [],
         "tracks": tracks,
-        "renderConfig": {
-            "destination": "",
-            "filename": project_title or "untitled",
-            "numChannels": 1,
-            "aspirationFormat": "noAspiration",
-            "bitDepth": 16,
-            "sampleRate": 44100,
-            "exportMixDown": True,
-            "exportPitch": False,
-        },
+        "renderConfig": {"destination": "", "filename": project_title or "untitled", "numChannels": 1, "aspirationFormat": "noAspiration", "bitDepth": 16, "sampleRate": 44100, "exportMixDown": True, "exportPitch": False},
     }
 
 
@@ -673,12 +573,7 @@ def load_score_info(readfile):
             full_len = get_time_signature_duration(*time_sigs[0])
             if full_len and measure_len < full_len:
                 pickup = (measure_len, full_len)
-    return {
-        "measure_count": measure_count,
-        "time_signatures": time_sigs,
-        "tempos": tempos,
-        "pickup": pickup,
-    }
+    return {"measure_count": measure_count, "time_signatures": time_sigs, "tempos": tempos, "pickup": pickup}
 
 
 def load_project_title(readfile):
